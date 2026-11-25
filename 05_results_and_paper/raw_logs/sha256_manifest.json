@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-11-25T15:27:00.883310+00:00",
+  "policy": "Zero Estimation / 100% Real Execution / No-Backup ZIP Overwrite",
+  "manuscript_zip_path": "05_results_and_paper/CASCADE-SQL_manuscript.zip",
+  "manuscript_zip_sha256": "6c2f7a9eec0949c2a0f35fbfb42719ce7bf547aeadd1310f7176adcc7b7d009f",
+  "artifacts_sha256": {
+    "05_results_and_paper/manuscript/highlights.tex": "c4622bbc60b63c954d012976ddd3d3f13a6d03f32c56e61a4dabf2d8985178db",
+    "05_results_and_paper/manuscript/main.tex": "c695e2febed5572e1a87a3e3e240646c95b24e462a42e075351fab9b915eb60a"
+  }
+}

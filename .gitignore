@@ -1,0 +1,27 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Unrelated Local Scratch Files
+work_CAPQ-Pareto.txt
+CASCADE-SQL-work.txt
+Gemini_Generated_Image_*.jpg
+*.bak
+*~
+
+# Large Raw Datasets & Checkpoints (Tracked via SHA-256 Manifest)
+01_datasets/raw/**/*.csv
+01_datasets/raw/**/*.parquet
+01_datasets/processed/*.parquet
+02_models_colab/checkpoints/*.pt
+02_models_colab/checkpoints/*.bin
+
+# Cloud Secrets (NEVER COMMIT)
+*credentials*.json
+*service-account*.json
+*gcp-key*.json
+terraform.tfstate*
+.terraform/
