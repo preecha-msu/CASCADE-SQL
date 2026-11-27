@@ -1,0 +1,18 @@
+{
+  "timestamp_utc": "2026-11-27T13:14:26.349675+00:00",
+  "execution_time_ms": 18.332,
+  "latency_comparison_ms": {
+    "cascade_sql": {
+      "p50": 0.267,
+      "p95": 1.078,
+      "p99": 2.852,
+      "mean": 0.394
+    },
+    "modsecurity_baseline": {
+      "p50": 4.405,
+      "p95": 9.284,
+      "p99": 11.779,
+      "mean": 4.793
+    }
+  }
+}

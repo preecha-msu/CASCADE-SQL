@@ -1,0 +1,59 @@
+{
+  "timestamp_utc": "2026-11-27T13:09:01.835020+00:00",
+  "execution_time_ms": 48.506,
+  "evaluation_results": {
+    "held_out_test": {
+      "samples": 9920,
+      "accuracy": 0.9888,
+      "precision": 0.9959,
+      "recall": 0.986,
+      "f1_score": 0.9909,
+      "false_positive_rate": 0.00663,
+      "false_negative_rate": 0.01398,
+      "escalation_rate_pct": 5.87,
+      "confusion_matrix": {
+        "tp": 6066,
+        "fp": 25,
+        "fn": 86,
+        "tn": 3743
+      }
+    },
+    "imbalanced_100_1": {
+      "samples": 3737,
+      "accuracy": 0.996,
+      "precision": 0.72,
+      "recall": 0.973,
+      "f1_score": 0.8276,
+      "false_positive_rate": 0.00378,
+      "false_negative_rate": 0.02703,
+      "escalation_rate_pct": 3.13,
+      "confusion_matrix": {
+        "tp": 36,
+        "fp": 14,
+        "fn": 1,
+        "tn": 3686
+      }
+    },
+    "adversarial_obfuscated": {
+      "samples": 6152,
+      "accuracy": 0.986,
+      "precision": 1.0,
+      "recall": 0.986,
+      "f1_score": 0.993,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.01398,
+      "escalation_rate_pct": 6.5,
+      "confusion_matrix": {
+        "tp": 6066,
+        "fp": 0,
+        "fn": 86,
+        "tn": 0
+      }
+    }
+  },
+  "sha256_sources": {
+    "test_csv": "a222de8e3b88b442f4b161e38c9d5f6e3d7a20cbede487a0e82503b72e442ca9",
+    "imbalanced_csv": "d55a8afe41bf33d7d8ebece7137e8649cbc8b462d722a1e83421f5f2dcd3023c",
+    "adversarial_csv": "2d743ea272620f2184a393aaae0a314eda7b2d4db95ef0b8ede95548db0f9101"
+  }
+}

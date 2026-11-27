@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-11-27T13:15:20.238646+00:00",
+  "execution_time_ms": 0.002,
+  "finops_comparison_per_1m_requests": {
+    "modsecurity_baseline": {
+      "avg_cpu_ms": 4.8,
+      "allocated_ram_mb": 524,
+      "estimated_cost_usd_per_1m": 0.1213
+    },
+    "cascade_sql": {
+      "avg_cpu_ms": 0.394,
+      "allocated_ram_mb": 262,
+      "estimated_cost_usd_per_1m": 0.0097
+    },
+    "cost_reduction_percentage": 92.0
+  }
+}

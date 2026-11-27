@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-11-27T12:59:55.419279+00:00",
+  "execution_time_ms": 57.599,
+  "validation_samples": 5987,
+  "optimal_thresholds": {
+    "tau_low": 0.35,
+    "tau_high": 0.65
+  },
+  "performance_at_optimal_thresholds": {
+    "escalation_rate_pct": 6.08,
+    "expected_latency_ms": 0.478,
+    "accuracy": 0.9835,
+    "fnr": 0.02133,
+    "fpr": 0.00764,
+    "tp": 3809,
+    "fp": 16,
+    "fn": 83,
+    "tn": 2079
+  },
+  "sha256": "c5bb7687db69af1da0297dfb93b3afb55435da5beaae4efd4ea85af3d7d94fd6"
+}

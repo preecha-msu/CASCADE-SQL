@@ -1,10 +1,15 @@
 {
-  "timestamp_utc": "2026-11-25T15:27:00.883310+00:00",
+  "timestamp_utc": "2026-11-27T13:17:47.044238+00:00",
   "policy": "Zero Estimation / 100% Real Execution / No-Backup ZIP Overwrite",
-  "manuscript_zip_path": "05_results_and_paper/CASCADE-SQL_manuscript.zip",
-  "manuscript_zip_sha256": "6c2f7a9eec0949c2a0f35fbfb42719ce7bf547aeadd1310f7176adcc7b7d009f",
+  "manuscript_zip_sha256": "1a9fcbe9671d2a46a8fb4508f89a8de80fea51e86c713fb9d9b8cdc03895dbcf",
   "artifacts_sha256": {
     "05_results_and_paper/manuscript/highlights.tex": "c4622bbc60b63c954d012976ddd3d3f13a6d03f32c56e61a4dabf2d8985178db",
-    "05_results_and_paper/manuscript/main.tex": "c695e2febed5572e1a87a3e3e240646c95b24e462a42e075351fab9b915eb60a"
+    "05_results_and_paper/manuscript/main.tex": "39631b41f9d6890ac7fc0146d800e5b79fa5ef43e2cfa15b5a9b048cb6f6d12e",
+    "05_results_and_paper/tables_latex/tab1_dataset_summary.tex": "9bd0e1d63d6236f7a8449454c1395e57969522206203779842040b38ca6c7105",
+    "05_results_and_paper/tables_latex/tab2_rq1_performance.tex": "e839b62c971b0a11e2a3a1665123b8eecc784fe8c82494f732b18903be9a9220",
+    "05_results_and_paper/tables_latex/tab3_rq2_latency.tex": "b92e5db03093c9456b88ded0b7dfb5521e8f2cb190c01332188310a7d4059e09",
+    "05_results_and_paper/tables_latex/tab4_rq3_finops.tex": "885ce5c95d4351d2c52286ef9c50928d87d1059d98a0bf08491c0e18becad751",
+    "05_results_and_paper/tables_latex/tab5_rq4_ablation.tex": "6cf203f03b5c62a926187c41cc813b60861eaecc44c118d63694e08bc7fb9f7c",
+    "05_results_and_paper/tables_latex/tab6_rq5_xai.tex": "9d80d2b92bf69c3e3f555f4c7c5f4ce349a907ea3a4c1465df3550553727ee75"
   }
 }

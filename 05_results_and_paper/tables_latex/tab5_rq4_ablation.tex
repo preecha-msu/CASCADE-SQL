@@ -1,0 +1,16 @@
+% Auto-generated from RQ4 ablation audit
+\begin{table}[htbp]
+\centering
+\caption{Ablation study evaluating the contribution of architectural components in CASCADE-SQL on test accuracy, F1-score, and mean latency.}
+\label{tab:rq4_ablation}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Model Variant} & \textbf{Accuracy} & \textbf{F1-Score} & \textbf{Mean Latency (ms)} \\
+\midrule
+\textbf{Full CASCADE-SQL (Ours)} & \textbf{0.9888} & \textbf{0.9909} & \textbf{0.394} \\
+w/o Stage-1 (Only Stage-2 GNN) & 0.9892 & 0.9912 & 1.950 \\
+w/o Stage-2 (Only Stage-1 CNN-BiLSTM) & 0.9650 & 0.9701 & 0.280 \\
+w/o Canonical AST (Raw Strings) & 0.9410 & 0.9485 & 0.450 \\
+\bottomrule
+\end{tabular}
+\end{table}

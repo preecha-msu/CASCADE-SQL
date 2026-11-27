@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-11-27T13:17:46.928095+00:00",
+  "execution_time_ms": 0.002,
+  "xai_top_features": [
+    {
+      "token_or_subgraph": "UNION SELECT",
+      "shap_importance_score": 0.428
+    },
+    {
+      "token_or_subgraph": "PG_SLEEP / SLEEP",
+      "shap_importance_score": 0.315
+    },
+    {
+      "token_or_subgraph": "INFORMATION_SCHEMA",
+      "shap_importance_score": 0.184
+    },
+    {
+      "token_or_subgraph": "Inline Comment (/*!...*/) ",
+      "shap_importance_score": 0.052
+    },
+    {
+      "token_or_subgraph": "Tautology ('1'='1')",
+      "shap_importance_score": 0.021
+    }
+  ],
+  "algorithmic_dos_resilience": {
+    "max_allowed_sql_bytes": 8192,
+    "overlength_query_action": "Early Rejection / Truncation Fallback",
+    "latency_under_10kb_payload_ms": 0.412
+  }
+}

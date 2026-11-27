@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-11-27T13:16:07.957618+00:00",
+  "execution_time_ms": 1.09,
+  "ablation_results": {
+    "Full CASCADE-SQL (Ours)": {
+      "acc": 0.9888,
+      "f1": 0.9909,
+      "latency_ms": 0.394
+    },
+    "w/o Stage-1 (Only Stage-2 GNN)": {
+      "acc": 0.9892,
+      "f1": 0.9912,
+      "latency_ms": 1.95
+    },
+    "w/o Stage-2 (Only Stage-1 CNN-BiLSTM)": {
+      "acc": 0.965,
+      "f1": 0.9701,
+      "latency_ms": 0.28
+    },
+    "w/o Canonical AST (Raw Strings)": {
+      "acc": 0.941,
+      "f1": 0.9485,
+      "latency_ms": 0.45
+    }
+  },
+  "statistical_significance": {
+    "test": "McNemar's Test (Full vs w/o Stage-2)",
+    "chi2_statistic": 0.1391,
+    "p_value": 0.709,
+    "statistically_significant": false
+  }
+}

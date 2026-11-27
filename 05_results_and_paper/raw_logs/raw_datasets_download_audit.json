@@ -1,0 +1,59 @@
+{
+  "timestamp_utc": "2026-11-25T15:36:30.119221+00:00",
+  "downloaded_files": {
+    "sqli_modified_corpus.csv": {
+      "source_url": "https://huggingface.co/datasets/zrmarine/sql_injection/resolve/main/Modified_SQL_Dataset.csv",
+      "size_bytes": 2284050,
+      "sha256": "60af1d160dcc5c3f61440dc8f0c019e8898243951e283402857c10294c6f5cc5",
+      "rows": 30919,
+      "columns": [
+        "Query",
+        "Label"
+      ],
+      "encoding": "utf-8"
+    },
+    "hf_kaveny_sqli.json": {
+      "source_url": "https://huggingface.co/datasets/Kaveny/sql-injection/resolve/main/sqli1.json",
+      "size_bytes": 37800409,
+      "sha256": "ce318dc96cec6189381214761b427ccc878dd163ce54d77135538a4f520cfd87",
+      "rows": 10105,
+      "columns": [
+        "conversations"
+      ],
+      "encoding": "utf-8"
+    }
+  },
+  "failed_urls": [
+    {
+      "file": "sqli_modified_corpus.csv",
+      "url": "https://raw.githubusercontent.com/taruntiwarihp/SQL_Injection_Detection/master/sqli.csv",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/taruntiwarihp/SQL_Injection_Detection/master/sqli.csv"
+    },
+    {
+      "file": "sqli_modified_corpus.csv",
+      "url": "https://raw.githubusercontent.com/ebrasha/sql-injection-dataset/main/Modified_SQL_Dataset.csv",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/ebrasha/sql-injection-dataset/main/Modified_SQL_Dataset.csv"
+    },
+    {
+      "file": "sqli_payloads_owasp.txt",
+      "url": "https://raw.githubusercontent.com/payloadbox/sql-injection-payload-list/master/Intruder/detect/Generic_SQLI.txt",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/payloadbox/sql-injection-payload-list/master/Intruder/detect/Generic_SQLI.txt"
+    },
+    {
+      "file": "sqli_payloads_owasp.txt",
+      "url": "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/SQLi/Generic-SQLi.txt",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/SQLi/Generic-SQLi.txt"
+    },
+    {
+      "file": "sqli_error_time_union.txt",
+      "url": "https://raw.githubusercontent.com/payloadbox/sql-injection-payload-list/master/Intruder/detect/Generic_UnionSelect.txt",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/payloadbox/sql-injection-payload-list/master/Intruder/detect/Generic_UnionSelect.txt"
+    },
+    {
+      "file": "sqli_error_time_union.txt",
+      "url": "https://raw.githubusercontent.com/payloadbox/sql-injection-payload-list/master/Intruder/detect/Generic_TimeBased.txt",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/payloadbox/sql-injection-payload-list/master/Intruder/detect/Generic_TimeBased.txt"
+    }
+  ],
+  "elapsed_ms": 35473.74
+}

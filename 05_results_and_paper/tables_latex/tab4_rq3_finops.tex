@@ -1,0 +1,14 @@
+% Auto-generated from RQ3 FinOps cost audit
+\begin{table}[htbp]
+\centering
+\caption{FinOps cost comparison per 1,000,000 requests on Google Cloud Run between ModSecurity baseline and CASCADE-SQL.}
+\label{tab:rq3_finops}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Deployment Configuration} & \textbf{Avg CPU Time (ms)} & \textbf{RAM (MB)} & \textbf{Cost per 1M Requests (\$USD)} \\
+\midrule
+ModSecurity CRS v4 (Baseline) & 4.800 & 524 & \$0.1213 \\
+\textbf{CASCADE-SQL (Ours)} & \textbf{0.394} & \textbf{262} & \textbf{\$0.0097} \\
+\bottomrule
+\end{tabular}
+\end{table}

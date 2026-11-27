@@ -1,0 +1,17 @@
+% Auto-generated from RQ5 XAI audit
+\begin{table}[htbp]
+\centering
+\caption{Top SHAP feature attributions and structural tokens driving CASCADE-SQL detection decisions.}
+\label{tab:rq5_xai}
+\begin{tabular}{lr}
+\toprule
+\textbf{SQL Token / AST Subgraph Component} & \textbf{Mean SHAP Importance Score} \\
+\midrule
+UNION SELECT & 0.428 \\
+PG_SLEEP / SLEEP & 0.315 \\
+INFORMATION_SCHEMA & 0.184 \\
+Inline Comment (/*!...*/)  & 0.052 \\
+Tautology ('1'='1') & 0.021 \\
+\bottomrule
+\end{tabular}
+\end{table}

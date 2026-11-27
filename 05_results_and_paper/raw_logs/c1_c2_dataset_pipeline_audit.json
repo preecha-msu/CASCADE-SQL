@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "2026-11-25T15:42:18.067898+00:00",
+  "execution_seconds": 23.173,
+  "raw_records_ingested": 87481,
+  "kaveny_clean_sqli_instances": 56563,
+  "complex_benign_sql_added": 0,
+  "contradictory_label_records_dropped": 10,
+  "deduplicated_total": 50460,
+  "dialect_breakdown": {
+    "mysql": 26836,
+    "postgresql": 23624
+  },
+  "parse_status_breakdown": {
+    "REGEX_FALLBACK": 21285,
+    "PARSED_AST": 16571,
+    "TOKENIZED_STRUCTURAL": 12604
+  },
+  "unique_canonical_templates": 42667,
+  "zero_template_leakage_verified": true,
+  "splits": {
+    "train": {
+      "rows": 34553,
+      "benign": 13661,
+      "sqli": 20892,
+      "templates": 29013
+    },
+    "val": {
+      "rows": 5987,
+      "benign": 2095,
+      "sqli": 3892,
+      "templates": 5120
+    },
+    "test": {
+      "rows": 9920,
+      "benign": 3768,
+      "sqli": 6152,
+      "templates": 8534
+    },
+    "imbalanced_100_1": {
+      "rows": 3737,
+      "benign": 3700,
+      "sqli": 37
+    },
+    "adversarial_obfuscated": {
+      "rows": 6152,
+      "strategies": {
+        "space2comment": 1026,
+        "alternating_case": 1026,
+        "control_whitespace": 1025,
+        "compound_wafamole": 1025,
+        "tautology_hex_chr_like": 1025,
+        "mysql_versioned_comment": 552,
+        "pg_comment_typecast": 473
+      }
+    }
+  },
+  "sha256_hashes": {
+    "train_csv": "73eec983aaa5d87ab229b08d6dc31ca660b048ba2f90d1a5ae3770eff2c34e55",
+    "val_csv": "c5bb7687db69af1da0297dfb93b3afb55435da5beaae4efd4ea85af3d7d94fd6",
+    "test_csv": "a222de8e3b88b442f4b161e38c9d5f6e3d7a20cbede487a0e82503b72e442ca9",
+    "imbalanced_100_1_csv": "d55a8afe41bf33d7d8ebece7137e8649cbc8b462d722a1e83421f5f2dcd3023c",
+    "adversarial_obfuscated_csv": "2d743ea272620f2184a393aaae0a314eda7b2d4db95ef0b8ede95548db0f9101"
+  }
+}
