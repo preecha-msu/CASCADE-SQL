@@ -1,9 +1,9 @@
 {
-  "timestamp_utc": "2026-11-28T16:09:55.964888+00:00",
+  "timestamp_utc": "2026-11-28T16:22:14.730756+00:00",
   "policy": "Zero Estimation / 100% Real Execution / No-Backup Overwrite (Phase-2 Hardened)",
   "manuscript_zip_path": "05_results_and_paper/CASCADE-SQL_manuscript.zip",
   "manuscript_zip_entries": 24,
-  "manuscript_zip_sha256": "ee46faa5f49c39bbb158b2e6e6c5dbf9d8c534da1e199216e7b858ff92b79fc2",
+  "manuscript_zip_sha256": "2c0b5237c2086166969976b5f50f15e9390500c345b7c459fa08a32b82cda78b",
   "tables_count": 13,
   "figures_count": 8,
   "artifacts_sha256": {
@@ -23,7 +23,7 @@
     "05_results_and_paper/tables_latex/tab7_exp2_padding_bypass.tex": "71074a388d26c1705ffcc75968b5bc7b20cb22ea16db424bdfc5324d2a73cba7",
     "05_results_and_paper/tables_latex/tab8_exp1_sota_baselines.tex": "a9a54368280c375e7825dfe49bb1da90953476453a37397f7434cd495e0e2723",
     "05_results_and_paper/tables_latex/tab9_exp3_adaptive_wafamole.tex": "531f38ab716d8ac16f93dc72e3a85c2271ad8219a983bd9bed885809d0d57c7d",
-    "05_results_and_paper/figures_pdf/fig0_system_architecture.pdf": "203443693047046c367fcfd14ae754867cda6eddca4cd46e16c3b5912b08aafb",
+    "05_results_and_paper/figures_pdf/fig0_system_architecture.pdf": "c2fd0a818cedc40fea97755931e7291d1cff5c7433e246d84141cdd840b500c9",
     "05_results_and_paper/figures_pdf/fig1_latency_cdf.pdf": "4fc077022b772fbd275dc6755be0ea73be07374131933599126fe7f088ecf56b",
     "05_results_and_paper/figures_pdf/fig2_adversarial_evasion.pdf": "d9d952c0de7e81cd21541ae1fea25d9cb1c54a3e672cfc7a9981813f9a889865",
     "05_results_and_paper/figures_pdf/fig3_finops_pareto.pdf": "77d83affcb660d071d3e90e84adea83c9bf90d99e2ff44e4fd29a45ec5c2ccdf",
