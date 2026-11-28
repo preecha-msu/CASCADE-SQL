@@ -1,6 +1,8 @@
 # CASCADE-SQL (Phase-2 Hardened Q1 Release)
 
 **Manuscript Title:** *CASCADE-SQL: A Sub-Millisecond Cascaded Multi-Model Proxy for Real-Time SQL Injection Defense in Serverless Cloud Databases*  
+**Author:** Preecha Noiumkar (Research Center of Information Technology for the Future, Department of Information Technology, Faculty of Informatics, Mahasarakham University, Maha Sarakham 44150, Thailand; `preecha.n@msu.ac.th`)  
+**Funding:** Financially supported by Mahasarakham University.  
 **Target Journal:** *Computers & Security* (Elsevier, Q1)  
 **Verification Standard:** Zero Estimation / 100% Real Execution / Cryptographic SHA-256 Audited
 
