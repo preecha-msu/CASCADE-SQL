@@ -1,7 +1,7 @@
 \begin{itemize}
-  \item Cascaded INT8 ONNX proxy defends serverless DBs in 0.636 ms mean latency.
-  \item Zero-leakage AST template split across 50,460 PostgreSQL and MySQL queries.
-  \item Achieves 0.9991 F1, 0.053% FPR, and 99.59% recall on obfuscated SQLi.
-  \item Cuts Cloud Run compute cost by 81.1% vs. monolithic PyTorch ensemble.
-  \item Pre-parser O(1) DoS guard blocks 64 KB & 200-depth bombs up to 69,852x faster.
+  \item Cascaded INT8 ONNX proxy defends serverless SQL DBs in 0.636 ms mean latency.
+  \item 5-fold zero-leakage AST benchmark on 50,460 queries yields 0.9989 +/- 0.0002 F1.
+  \item Strided multi-window pooling stops 256B-4KB tail-padding bypass (99.1-100% hit).
+  \item 0.00% FPR on 2,000 hard-benign ORM queries vs. 80.0% FPR in OWASP CRS v4.
+  \item Live FastAPI+OTel proxy sustains 549 RPS at 0% error and cuts AI cost by 81.1%.
 \end{itemize}

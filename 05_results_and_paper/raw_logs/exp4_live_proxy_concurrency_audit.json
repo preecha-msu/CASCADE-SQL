@@ -1,0 +1,96 @@
+{
+  "timestamp_utc": "2026-11-28T15:26:36.105147+00:00",
+  "total_execution_sec": 9.481,
+  "relational_db_backend": {
+    "users_rows": 4000,
+    "orders_rows": 6000,
+    "sqlite_version": "3.51.0"
+  },
+  "total_live_http_requests_measured": 3200,
+  "concurrency_tiers": [
+    {
+      "concurrency": 1,
+      "requests": 800,
+      "wall_time_sec": 3.1878,
+      "sustained_rps": 250.96,
+      "http_5xx_error_rate_pct": 0.0,
+      "live_proxy_accuracy": 0.99125,
+      "littles_law_effective_concurrency": 0.99,
+      "e2e_latency_ms": {
+        "mean": 3.938,
+        "p50": 3.361,
+        "p95": 7.43,
+        "p99": 8.767
+      },
+      "otel_span_breakdown_mean_ms": {
+        "network_and_http_serialization_ms": 2.153,
+        "cascade_ai_inspection_ms": 1.175,
+        "relational_db_execution_ms": 0.54
+      }
+    },
+    {
+      "concurrency": 10,
+      "requests": 800,
+      "wall_time_sec": 1.5388,
+      "sustained_rps": 519.9,
+      "http_5xx_error_rate_pct": 0.0,
+      "live_proxy_accuracy": 0.99125,
+      "littles_law_effective_concurrency": 9.9,
+      "e2e_latency_ms": {
+        "mean": 19.047,
+        "p50": 18.6,
+        "p95": 25.958,
+        "p99": 31.62
+      },
+      "otel_span_breakdown_mean_ms": {
+        "network_and_http_serialization_ms": 14.419,
+        "cascade_ai_inspection_ms": 2.366,
+        "relational_db_execution_ms": 2.164
+      }
+    },
+    {
+      "concurrency": 50,
+      "requests": 800,
+      "wall_time_sec": 1.5167,
+      "sustained_rps": 527.47,
+      "http_5xx_error_rate_pct": 0.0,
+      "live_proxy_accuracy": 0.99125,
+      "littles_law_effective_concurrency": 47.03,
+      "e2e_latency_ms": {
+        "mean": 89.163,
+        "p50": 89.263,
+        "p95": 122.817,
+        "p99": 165.455
+      },
+      "otel_span_breakdown_mean_ms": {
+        "network_and_http_serialization_ms": 82.911,
+        "cascade_ai_inspection_ms": 2.676,
+        "relational_db_execution_ms": 3.476
+      }
+    },
+    {
+      "concurrency": 100,
+      "requests": 800,
+      "wall_time_sec": 1.4572,
+      "sustained_rps": 549.01,
+      "http_5xx_error_rate_pct": 0.0,
+      "live_proxy_accuracy": 0.99125,
+      "littles_law_effective_concurrency": 84.86,
+      "e2e_latency_ms": {
+        "mean": 154.565,
+        "p50": 142.352,
+        "p95": 325.802,
+        "p99": 815.898
+      },
+      "otel_span_breakdown_mean_ms": {
+        "network_and_http_serialization_ms": 147.77,
+        "cascade_ai_inspection_ms": 2.553,
+        "relational_db_execution_ms": 4.148
+      }
+    }
+  ],
+  "sha256_verification": {
+    "live_proxy_server_py": "7a85efa37d923158908af102da8994862a518f4f26f8aa0fb833aea1a2172c7a",
+    "tab10_exp4_live_proxy_concurrency_tex": "aacc35af3c9a63676738f432ae2b91d944113acb48616f1e0db3285600b30f52"
+  }
+}

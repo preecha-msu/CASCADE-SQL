@@ -1,0 +1,20 @@
+% Auto-generated Related Work Paradigm Comparison Table
+\begin{table*}[htbp]
+\centering
+\caption{Comparison of SQLi defense paradigms across serverless deployment, syntactic/adversarial robustness, and methodological guarantees.}
+\label{tab:related_work}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Defense Paradigm} & \textbf{Sub-ms Mean Latency} & \textbf{Low ORM FPR ($<0.1\%$)} & \textbf{Dialect De-obfuscation} & \textbf{Tail-Padding Safe} & \textbf{DoS-Bounded AST} & \textbf{0\%-Leakage Eval} \\
+\midrule
+Regex Signature WAFs \cite{owaspcrs2024,appelt2018mlwaf} & \checkmark & $\times$ (28--80\% FPR) & $\times$ & \checkmark & $\times$ (ReDoS \cite{davis2018redos}) & — \\
+Lexical Fingerprinting \cite{galbreath2013libinj} & \checkmark & $\times$ (7--55\% FPR) & $\times$ & \checkmark & \checkmark & — \\
+Classical $n$-gram GBDT \cite{alazab2022imbalanced} & $\times$ (4.58 ms) & \checkmark & $\times$ & $\times$ & — & Rarely \\
+Monolithic CNN / BiLSTM \cite{fang2018bilstm,zhang2020cnn_bilstm} & $\times$ (6.29 ms) & \checkmark & Partial & $\times$ (Truncated) & — & Rarely \cite{arp2022dos_donts} \\
+Monolithic AST-GNN / BERT \cite{tang2020sql_ast,li2021ast_gnn,guan2023bert_sqli} & $\times$ (8.20 ms) & \checkmark & \checkmark & Partial & $\times$ (Parser Hang) & Rarely \\
+\textbf{CASCADE-SQL (Ours)} & \textbf{\checkmark (0.636 ms)} & \textbf{\checkmark (0.00--0.08\%)} & \textbf{\checkmark} & \textbf{\checkmark (Strided)} & \textbf{\checkmark ($O(L_{\max})$)} & \textbf{\checkmark (5-Fold AST)} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

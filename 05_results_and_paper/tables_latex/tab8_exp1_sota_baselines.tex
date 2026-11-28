@@ -1,0 +1,20 @@
+% Auto-generated from 100% Real 6-System SOTA Baseline Comparison (Exp-1)
+\begin{table*}[htbp]
+\centering
+\caption{Comprehensive comparison against industry WAFs (\texttt{OWASP CRS v4}, \texttt{LibInjection}), classical gradient boosting (\texttt{TF-IDF + HistGBDT}), deep recurrent attention (\texttt{BiLSTM-Attention}), and 4-layer \texttt{Subword SQL Transformer} across identical zero-leakage splits.}
+\label{tab:exp1_sota_baselines}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+\textbf{Defense System} & \textbf{Test F1} & \textbf{Test FPR} & \textbf{100:1 PR-AUC} & \textbf{Adv. Recall} & \textbf{Mean (ms)} & \textbf{$p_{99}$ (ms)} & \textbf{McNemar $p$ (Adv)} \\
+\midrule
+OWASP ModSecurity CRS v4 & 0.8937 & 0.2848 & 0.2678 & 94.13\% & 0.047 & 0.170 & < 0.0001 \\
+LibInjection Tokenizer Engine & 0.6934 & 0.0698 & 0.0593 & 58.58\% & 0.020 & 0.046 & < 0.0001 \\
+TF-IDF + HistGBDT (Classical ML) & 0.9963 & 0.0066 & 0.8965 & 92.39\% & 4.579 & 6.400 & < 0.0001 \\
+BiLSTM-Attention (2-Layer ONNX) & 0.9985 & 0.0000 & 0.9203 & 97.11\% & 6.295 & 13.298 & < 0.0001 \\
+Subword SQL Transformer (4-Layer ONNX) & 0.9984 & 0.0011 & 0.9185 & 99.76\% & 8.197 & 18.133 & 0.1338 \\
+\textbf{CASCADE-SQL (Hardened INT8, Ours)} & \textbf{0.9990} & \textbf{0.0008} & \textbf{0.9257} & \textbf{99.63\%} & \textbf{1.729} & \textbf{7.329} & — \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

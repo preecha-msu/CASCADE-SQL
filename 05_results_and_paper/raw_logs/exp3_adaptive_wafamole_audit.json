@@ -1,0 +1,96 @@
+{
+  "timestamp_utc": "2026-11-28T15:22:11.028843+00:00",
+  "execution_time_sec": 28.148,
+  "total_adversarial_queries_executed": 40000,
+  "budget_progression": [
+    {
+      "query_budget_B": 0,
+      "samples": 400,
+      "mean_depressed_p1_score": 0.9817,
+      "stage1_only_recall": 0.9825,
+      "stage1_only_asr_pct": 1.75,
+      "cascade_escalation_rate_pct": 9.5,
+      "cascade_recall": 0.9825,
+      "cascade_asr_pct": 1.75,
+      "cascade_mean_latency_ms": 0.7605,
+      "mcnemar_vs_stage1_only": {
+        "b_cascade_saved": 0,
+        "c_s1_saved": 0,
+        "chi2": 0.0,
+        "p_value": 1.0
+      }
+    },
+    {
+      "query_budget_B": 12,
+      "samples": 400,
+      "mean_depressed_p1_score": 0.8933,
+      "stage1_only_recall": 0.9025,
+      "stage1_only_asr_pct": 9.75,
+      "cascade_escalation_rate_pct": 16.25,
+      "cascade_recall": 0.935,
+      "cascade_asr_pct": 6.5,
+      "cascade_mean_latency_ms": 0.8159,
+      "mcnemar_vs_stage1_only": {
+        "b_cascade_saved": 13,
+        "c_s1_saved": 0,
+        "chi2": null,
+        "p_value": 0.000244140625
+      }
+    },
+    {
+      "query_budget_B": 24,
+      "samples": 400,
+      "mean_depressed_p1_score": 0.8265,
+      "stage1_only_recall": 0.8325,
+      "stage1_only_asr_pct": 16.75,
+      "cascade_escalation_rate_pct": 22.5,
+      "cascade_recall": 0.9,
+      "cascade_asr_pct": 10.0,
+      "cascade_mean_latency_ms": 0.8777,
+      "mcnemar_vs_stage1_only": {
+        "b_cascade_saved": 27,
+        "c_s1_saved": 0,
+        "chi2": 25.037,
+        "p_value": 5.623957756679237e-07
+      }
+    },
+    {
+      "query_budget_B": 48,
+      "samples": 400,
+      "mean_depressed_p1_score": 0.7479,
+      "stage1_only_recall": 0.7675,
+      "stage1_only_asr_pct": 23.25,
+      "cascade_escalation_rate_pct": 30.75,
+      "cascade_recall": 0.8575,
+      "cascade_asr_pct": 14.25,
+      "cascade_mean_latency_ms": 0.9651,
+      "mcnemar_vs_stage1_only": {
+        "b_cascade_saved": 37,
+        "c_s1_saved": 1,
+        "chi2": 32.2368,
+        "p_value": 1.3647818714582528e-08
+      }
+    },
+    {
+      "query_budget_B": 100,
+      "samples": 400,
+      "mean_depressed_p1_score": 0.6225,
+      "stage1_only_recall": 0.635,
+      "stage1_only_asr_pct": 36.5,
+      "cascade_escalation_rate_pct": 34.25,
+      "cascade_recall": 0.775,
+      "cascade_asr_pct": 22.5,
+      "cascade_mean_latency_ms": 1.0283,
+      "mcnemar_vs_stage1_only": {
+        "b_cascade_saved": 58,
+        "c_s1_saved": 2,
+        "chi2": 50.4167,
+        "p_value": 1.2433380188924912e-12
+      }
+    }
+  ],
+  "sha256_verification": {
+    "test_csv": "a222de8e3b88b442f4b161e38c9d5f6e3d7a20cbede487a0e82503b72e442ca9",
+    "tab9_exp3_adaptive_wafamole_tex": "531f38ab716d8ac16f93dc72e3a85c2271ad8219a983bd9bed885809d0d57c7d"
+  }
+}

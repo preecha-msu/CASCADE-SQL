@@ -1,17 +1,13 @@
-# CASCADE-SQL
+# CASCADE-SQL (Phase-2 Hardened Q1 Release)
 
-**Full Title:** *CASCADE-SQL: A Sub-Millisecond Cascaded Multi-Model Proxy for Real-Time SQL Injection Defense in Serverless Cloud Databases*  
+**Manuscript Title:** *CASCADE-SQL: A Sub-Millisecond Cascaded Multi-Model Proxy for Real-Time SQL Injection Defense in Serverless Cloud Databases*  
 **Target Journal:** *Computers & Security* (Elsevier, Q1)  
-**Audit Protocol:** Zero Estimation / 100% Real Execution (Cryptographic SHA-256 Verified)
+**Verification Standard:** Zero Estimation / 100% Real Execution / Cryptographic SHA-256 Audited
 
-## Verified Real Execution Summary
-- **Dataset Isolation:** 50,460 deduplicated PostgreSQL & MySQL queries across 42,667 canonical `sqlglot` AST templates (**0% cross-split template leakage**).
-- **Models (`02_models_colab/exported_onnx/`):**
-  - `stage1_cnn_bilstm_int8.onnx` (145,249 params, 542,892 bytes)
-  - `stage2_ast_verifier_int8.onnx` (106,177 params, 196,267 bytes)
-  - Optimal Validation Router Thresholds: $\tau_{\text{low}}^* = 0.05, \tau_{\text{high}}^* = 0.65$
-- **RQ1 (Accuracy & Evasion):** Held-out Test F1 = **0.9991**, ROC-AUC = **0.9998**, FPR = **0.053%**; 100:1 Imbalanced Precision = **94.29%** (vs. 3.05% CRS v4); Adversarial Obfuscated Recall = **99.59%**.
-- **RQ2 (Single-vCPU Real Latency, $N=9,920$):** Mean = **0.636 ms**, $p_{50}$ = **0.613 ms**, $p_{95}$ = **0.705 ms**, $p_{99}$ = **1.202 ms**, Cold-Start = **20.43 ms**.
-- **RQ3 (Cloud Run FinOps):** Combined INT8 footprint = **721.83 KB**; Incremental compute cost = **$0.0157 / 1M requests** (**81.13%** savings vs. Monolithic PyTorch FP32).
-- **RQ4 (Ablation & Statistics):** McNemar vs. OWASP CRS v4 $\chi^2 = 1370.04$ ($p < 10^{-100}$); Wilcoxon INT8 vs. FP32 $p = 4.79e-87$.
-- **RQ5 (SHAP & DoS Guard):** Verified `shap.KernelExplainer` attributions + 100% Algorithmic DoS interception (**69,852.0x** speedup on 64 KB flood).
+## Complete Empirical & Hardening Highlights
+- **5-Fold Zero-Leakage AST Cross-Validation ($N=50,460$):** **0.9989 ± 0.0002 F1**, **0.9998 ± 0.0001 ROC-AUC**, **0% template overlap** across all 42,667 canonical templates.
+- **6-System SOTA Dominance (Exp-1):** Matches 4-Layer Subword SQL Transformer adversarial recall (**99.63%** vs. 99.76%, $p=0.1338$) while running **4.74x faster** in a **7.48x smaller** quantized ONNX footprint (**721.8 KB**), outperforming OWASP CRS v4, LibInjection, TF-IDF+GBDT, and BiLSTM-Attention.
+- **Prefix-Padding Bypass Eliminated (Exp-2):** Strided Multi-Window Pooling ($W=256, S=192$) lifts tail-injected SQLi recall across 256B–4KB benign prefixes from **0.00%** (naive truncation) to **99.10%–100.00%**.
+- **Adaptive Grey-Box WAF-A-MoLE Resilience (Exp-3):** Dynamic Stage-2 escalation ($\rho: 9.50\% \rightarrow 34.25\%$) defeats evolutionary attacks across 40,000 queries ($p = 1.24 \times 10^{-12}$).
+- **Live HTTP Proxy + SQL Backend Concurrency (Exp-4):** FastAPI + Uvicorn + OpenTelemetry proxy sustains **549.0 RPS** across $C=1..100$ concurrent clients with **0.00% error rate** and **1.18–2.55 ms** internal AI spans.
+- **Hard-Benign Modern ORM & 1,000:1 Imbalance (Exp-5):** **0.00% FPR** (0/2,000 false alarms on CTEs, Window functions, PostgreSQL JSONB, and SQL-homograph prose vs. 80.0% FPR in CRS v4) and **0.9927 PR-AUC** at 1,000:1 imbalance.

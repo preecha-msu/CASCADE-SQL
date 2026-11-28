@@ -1,0 +1,20 @@
+% Auto-generated from 100% Real Cross-Dialect Zero-Shot, Hard-Benign ORM & 1000:1 Imbalance Audit (Exp-5)
+\begin{table*}[htbp]
+\centering
+\caption{Zero-shot cross-dialect transferability, false-positive resilience on 2,000 Hard-Benign Modern ORM / SQL-homograph queries, and 1,000:1 extreme class-imbalance bootstrap evaluation (500 replicates).}
+\label{tab:exp5_cross_dialect_orm}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrr|lrrrr}
+\toprule
+\multicolumn{5}{c|}{\textbf{Part A: Zero-Shot Transfer \& 1,000:1 Imbalance}} & \multicolumn{5}{c}{\textbf{Part B: Hard-Benign Modern ORM Stress FPR ($N=2,000$)}} \\
+\cmidrule(r){1-5} \cmidrule(l){6-10}
+\textbf{Generalization / Imbalance Regime} & \textbf{Test Rows} & \textbf{Recall} & \textbf{FPR} & \textbf{F1 / PR-AUC} & \textbf{ORM / Homograph Category} & \textbf{CRS v4} & \textbf{LibInj} & \textbf{GBDT} & \textbf{Ours} \\
+\midrule
+Zero-Shot: MySQL $\rightarrow$ PostgreSQL & 1,923 & 0.9948 & 0.0000 & 0.9974 (F1) & CTE \& Window Analytics ($n=500$) & 100.0\\% & 0.0\\% & 0.0\\% & \textbf{0.00\\%} \\
+Zero-Shot: PostgreSQL $\rightarrow$ MySQL & 2,839 & 0.5399 & 0.0005 & 0.7006 (F1) & PostgreSQL JSONB \& Casts ($n=500$) & 100.0\\% & 100.0\\% & 0.0\\% & \textbf{0.00\\%} \\
+1,000:1 Extreme Imbalance (Mean) & 5,005 & — & 0.0006 & \textbf{0.9927} (PR) & English SQL-Homographs ($n=500$) & 20.0\\% & 20.0\\% & 0.0\\% & \textbf{0.00\\%} \\
+1,000:1 Bootstrap 95\% CI & 500 draws & — & — & [0.805, 1.000] & Multi-Quarter \texttt{UNION ALL} ($n=500$) & 100.0\\% & 100.0\\% & 0.0\\% & \textbf{0.00\\%} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

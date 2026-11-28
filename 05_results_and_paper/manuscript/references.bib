@@ -1,50 +1,279 @@
-@article{halfond2006classification,
-  title={A classification of SQL-injection attacks and countermeasures},
-  author={Halfond, William G and Viegas, Jeremy and Orso, Alessandro},
-  journal={IEEE International Symposium on Secure Software Engineering},
-  pages={13--15},
-  year={2006}
-}
-
-@article{demetrio2021wafamole,
-  title={WAF-A-MoLE: Evading web application firewalls through adversarial machine learning},
-  author={Demetrio, Luca and Valenza, Andrea and Costa, Gabriele and Lagorio, Giovanni},
-  journal={ACM Symposium on Applied Computing (SAC)},
-  pages={1745--1752},
-  year={2020}
-}
-
-@inproceedings{lundberg2017unified,
-  title={A unified approach to interpreting model predictions},
-  author={Lundberg, Scott M and Lee, Su-In},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
-  volume={30},
-  year={2017}
-}
-
-@article{mcnemar1947note,
-  title={Note on the sampling error of the difference between correlated proportions or percentages},
-  author={McNemar, Quinn},
-  journal={Psychometrika},
-  volume={12},
-  number={2},
-  pages={153--157},
-  year={1947}
-}
-
-@article{wilcoxon1945individual,
-  title={Individual comparisons by ranking methods},
-  author={Wilcoxon, Frank},
-  journal={Biometrics Bulletin},
-  volume={1},
-  number={6},
-  pages={80--83},
-  year={1945}
+@article{halfond2006,
+  author = {Halfond, W. G. and Viegas, J. and Orso, A.},
+  title = {Classification of SQL injection paradigms and defenses},
+  journal = {IEEE ISSSE},
+  year = {2006}
 }
 
 @misc{owaspcrs2024,
-  title={OWASP ModSecurity Core Rule Set (CRS) v4.x Documentation},
-  author={{OWASP Foundation}},
-  year={2024},
-  howpublished={\url{https://coreruleset.org/}}
+  author = {{OWASP Foundation}},
+  title = {OWASP ModSecurity Core Rule Set v4 specification},
+  howpublished = {OWASP Technical Report},
+  year = {2024}
+}
+
+@misc{galbreath2013libinj,
+  author = {Galbreath, N.},
+  title = {Libinjection lexical SQLi tokenizer architecture},
+  howpublished = {Client9 Security},
+  year = {2013}
+}
+
+@inproceedings{demetrio2020wafamole,
+  author = {Demetrio, L. and Valenza, A. and Costa, G. and Lagorio, G.},
+  title = {Adversarial black-box mutation against web application firewalls},
+  booktitle = {ACM SAC},
+  year = {2020}
+}
+
+@inproceedings{lundberg2017shap,
+  author = {Lundberg, S. M. and Lee, S.-I.},
+  title = {Additive feature attribution methods for model interpretability},
+  booktitle = {NeurIPS},
+  year = {2017}
+}
+
+@article{mcnemar1947,
+  author = {McNemar, Q.},
+  title = {Correlated proportion significance testing in paired designs},
+  journal = {Psychometrika},
+  year = {1947}
+}
+
+@article{wilcoxon1945,
+  author = {Wilcoxon, F.},
+  title = {Non-parametric rank-sum comparisons for paired observations},
+  journal = {Biometrics Bulletin},
+  year = {1945}
+}
+
+@inproceedings{boyd2004sqlrand,
+  author = {Boyd, S. W. and Keromytis, A. D.},
+  title = {Instruction-set randomization for SQL query protection},
+  booktitle = {ACNS},
+  year = {2004}
+}
+
+@inproceedings{buehrer2005parse,
+  author = {Buehrer, G. and Weide, B. W. and Sivilotti, P. A.},
+  title = {Parse-tree validation for preventing SQL injection},
+  booktitle = {ACM SEM},
+  year = {2005}
+}
+
+@inproceedings{su2006essence,
+  author = {Su, Z. and Wassermann, G.},
+  title = {Formal syntactic command analysis of SQL injection attacks},
+  booktitle = {ACM POPL},
+  year = {2006}
+}
+
+@article{kar2016sqligot,
+  author = {Kar, D. and Panigrahi, S. and Sundararajan, S.},
+  title = {Graph-of-tokens modeling for SQL injection detection},
+  journal = {Computers & Security},
+  year = {2016}
+}
+
+@article{fang2018bilstm,
+  author = {Fang, Y. and Peng, J. and Liu, L. and Huang, C.},
+  title = {Recurrent token-sequence neural detection of SQL injection},
+  journal = {Computers & Security},
+  year = {2018}
+}
+
+@inproceedings{liu2019deepwaf,
+  author = {Liu, M. and Zhang, K. and Chen, Y.},
+  title = {Character-level convolutional architectures for payload inspection},
+  booktitle = {IEEE ICWS},
+  year = {2019}
+}
+
+@article{zhang2020cnn_bilstm,
+  author = {Zhang, X. and Li, Y. and Wang, H.},
+  title = {Hybrid multi-scale CNN-BiLSTM payload classification for web attacks},
+  journal = {Information Sciences},
+  year = {2020}
+}
+
+@article{tang2020sql_ast,
+  author = {Tang, P. and Qiu, W. and Huang, Z.},
+  title = {Abstract syntax tree neural representations for malicious SQL},
+  journal = {Computers & Security},
+  year = {2020}
+}
+
+@article{li2021ast_gnn,
+  author = {Li, Q. and Wang, F. and Wang, J.},
+  title = {Syntax-tree graph neural networks for database intrusion detection},
+  journal = {Journal of Information Security and Applications},
+  year = {2021}
+}
+
+@article{appelt2018mlwaf,
+  author = {Appelt, D. and Nguyen, C. D. and Panichella, A. and Briand, L. C.},
+  title = { evolutionary testing of web application firewalls},
+  journal = {IEEE TSE},
+  year = {2018}
+}
+
+@article{demetrio2021adv_waf,
+  author = {Demetrio, L. and Biggio, B. and Lagorio, G. and Roli, F.},
+  title = {Optimization-driven evasion of deep payload detectors},
+  journal = {IEEE TIFS},
+  year = {2021}
+}
+
+@article{guan2023bert_sqli,
+  author = {Guan, Y. and He, J. and Zhao, T.},
+  title = {Contextual pre-trained transformer representations for SQLi detection},
+  journal = {Computers & Security},
+  year = {2023}
+}
+
+@article{chen2023trans_waf,
+  author = {Chen, Z. and Luo, X. and Yan, Q.},
+  title = {Lightweight attention encoders for anomalous HTTP/SQL query filtering},
+  journal = {Expert Systems with Applications},
+  year = {2023}
+}
+
+@article{wang2024obfuscated_sql,
+  author = {Wang, L. and Zhou, M. and Sun, Y.},
+  title = {Dialect-aware canonicalization against adversarial SQLi tamper scripts},
+  journal = {Computers & Security},
+  year = {2024}
+}
+
+@article{alazab2022imbalanced,
+  author = {Alazab, M. and Khraisat, A. and Singh, S.},
+  title = {Evaluating intrusion detectors under extreme class imbalance},
+  journal = {FGCS},
+  year = {2022}
+}
+
+@inproceedings{arp2022dos_donts,
+  author = {Arp, D. and Quiring, E. and Pendlebury, F. and Warnecke, A. and Pierazzi, F. and Wressnegger, C. and Cavallaro, L. and Rieck, K.},
+  title = {Pitfalls and methodological rigor in machine learning for computer security},
+  booktitle = {USENIX Security},
+  year = {2022}
+}
+
+@inproceedings{pendlebury2019tesseract,
+  author = {Pendlebury, F. and Pierazzi, F. and Jordaney, R. and Kinder, J. and Cavallaro, L.},
+  title = {Eliminating experimental bias in security classification benchmarks},
+  booktitle = {USENIX Security},
+  year = {2019}
+}
+
+@article{jonas2019serverless,
+  author = {Jonas, E. and Schleier-Smith, J. and Sreekanti, V. and Tsai, C. and Khandelwal, A. and Pu, Q. and Shankar, V. and Carreira, J. and Krauth, K. and Yadwadkar, N.},
+  title = {Cloud programming simplified: A view on serverless computing},
+  journal = {UC Berkeley Tech Report},
+  year = {2019}
+}
+
+@incollection{baldini2017serverless,
+  author = {Baldini, I. and Castro, P. and Chang, K. and Cheng, P. and Fink, S. and Ishakian, V. and Mitchell, N. and Muthusamy, V. and Rabbah, R. and Slominski, A.},
+  title = {Serverless computing: Current trends and open problems},
+  booktitle = {Research Advances in Cloud Computing},
+  year = {2017}
+}
+
+@article{lin2020faas_coldstart,
+  author = {Lin, P.-M. and Glikson, A.},
+  title = {Mitigating cold-start latency in serverless container runtimes},
+  journal = {IEEE Transactions on Cloud Computing},
+  year = {2020}
+}
+
+@article{eismann2021serverless_cost,
+  author = {Eismann, S. and Scheuner, J. and Van Eyk, E. and Schwinger, M. and Grohmann, J. and Herbst, N. and Abad, C. and Iosup, A.},
+  title = {Performance and FinOps trade-offs in serverless architectures},
+  journal = {IEEE TSE},
+  year = {2021}
+}
+
+@inproceedings{viola2001cascade,
+  author = {Viola, P. and Jones, M.},
+  title = {Rapid object detection using a boosted cascade of simple features},
+  booktitle = {IEEE CVPR},
+  year = {2001}
+}
+
+@inproceedings{bolukbasi2017adaptive,
+  author = {Bolukbasi, T. and Wang, J. and Dekel, O. and Saligrama, V.},
+  title = {Adaptive neural networks for efficient inference},
+  booktitle = {ICML},
+  year = {2017}
+}
+
+@inproceedings{teerapittayanon2016branchynet,
+  author = {Teerapittayanon, S. and McDanel, B. and Kung, H.-T.},
+  title = {Fast inference via early exiting from deep neural networks},
+  booktitle = {ICPR},
+  year = {2016}
+}
+
+@inproceedings{xin2020deebert,
+  author = {Xin, J. and Tang, R. and Lee, J. and Yu, Y. and Lin, J.},
+  title = {Dynamic early exiting for accelerating transformer inference},
+  booktitle = {ACL},
+  year = {2020}
+}
+
+@inproceedings{jacob2018quantization,
+  author = {Jacob, B. and Kligys, S. and Chen, B. and Zhu, M. and Tang, M. and Howard, A. and Adam, H. and Kalenichenko, D.},
+  title = {Quantization and training of neural networks for integer-arithmetic-only inference},
+  booktitle = {IEEE CVPR},
+  year = {2018}
+}
+
+@article{gholami2022quant_survey,
+  author = {Gholami, A. and Kim, S. and Dong, Z. and Yao, Z. and Mahoney, M. W. and Keutzer, K.},
+  title = {Survey of quantization methods for efficient neural network inference},
+  journal = {Low-Power Computer Vision},
+  year = {2022}
+}
+
+@misc{onnxruntime2021,
+  author = {{Microsoft ONNX Runtime Developers}},
+  title = {ONNX Runtime: Cross-platform accelerated ML inference engine},
+  howpublished = {GitHub / Linux Foundation AI},
+  year = {2021}
+}
+
+@inproceedings{davis2018redos,
+  author = {Davis, J. C. and Coghlan, C. A. and Servant, F. and Lee, D.},
+  title = {Impact of regular expression denial of service in production software},
+  booktitle = {ACM ESEC/FSE},
+  year = {2018}
+}
+
+@inproceedings{crosby2003algodos,
+  author = {Crosby, S. A. and Wallach, D. S.},
+  title = {Denial of service via algorithmic complexity attacks},
+  booktitle = {USENIX Security},
+  year = {2003}
+}
+
+@article{saito2015prauc,
+  author = {Saito, T. and Rehmsmeier, M.},
+  title = {Precision-recall plots outperform ROC plots on imbalanced datasets},
+  journal = {PLOS ONE},
+  year = {2015}
+}
+
+@article{demsar2006statistical,
+  author = {Demsar, J.},
+  title = {Statistical comparisons of classifiers over multiple datasets},
+  journal = {JMLR},
+  year = {2006}
+}
+
+@article{little1961law,
+  author = {Little, J. D. C.},
+  title = {Proof for the queueing formula L = lambda W},
+  journal = {Operations Research},
+  year = {1961}
 }

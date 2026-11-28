@@ -1,0 +1,88 @@
+{
+  "timestamp_utc": "2026-11-28T15:34:45.761741+00:00",
+  "execution_time_sec": 58.632,
+  "zero_shot_cross_dialect": {
+    "mysql_to_postgresql": {
+      "train_rows": 9763,
+      "zero_shot_test_rows": 1923,
+      "f1_score": 0.997375,
+      "recall": 0.994764,
+      "fpr": 0.0,
+      "roc_auc": 1.0,
+      "tp": 190,
+      "fp": 0,
+      "fn": 1,
+      "tn": 1732
+    },
+    "postgresql_to_mysql": {
+      "train_rows": 7521,
+      "zero_shot_test_rows": 2839,
+      "f1_score": 0.700647,
+      "recall": 0.5399,
+      "fpr": 0.000491,
+      "roc_auc": 0.986466,
+      "tp": 433,
+      "fp": 1,
+      "fn": 369,
+      "tn": 2036
+    }
+  },
+  "hard_benign_orm_overall": {
+    "total_hard_benign_queries": 2000,
+    "cascade_fp_count": 0,
+    "cascade_fpr_pct": 0.0,
+    "owasp_crs_fpr_pct": 80.0,
+    "libinjection_fpr_pct": 55.0,
+    "tfidf_gbdt_fpr_pct": 0.0
+  },
+  "hard_benign_orm_by_category": {
+    "cte_window_analytics": {
+      "queries": 500,
+      "cascade_fpr_pct": 0.0,
+      "owasp_crs_fpr_pct": 100.0,
+      "libinjection_fpr_pct": 0.0,
+      "tfidf_gbdt_fpr_pct": 0.0
+    },
+    "homograph_prose_trap": {
+      "queries": 500,
+      "cascade_fpr_pct": 0.0,
+      "owasp_crs_fpr_pct": 20.0,
+      "libinjection_fpr_pct": 20.0,
+      "tfidf_gbdt_fpr_pct": 0.0
+    },
+    "legitimate_union_report": {
+      "queries": 500,
+      "cascade_fpr_pct": 0.0,
+      "owasp_crs_fpr_pct": 100.0,
+      "libinjection_fpr_pct": 100.0,
+      "tfidf_gbdt_fpr_pct": 0.0
+    },
+    "pg_jsonb_typecast": {
+      "queries": 500,
+      "cascade_fpr_pct": 0.0,
+      "owasp_crs_fpr_pct": 100.0,
+      "libinjection_fpr_pct": 100.0,
+      "tfidf_gbdt_fpr_pct": 0.0
+    }
+  },
+  "extreme_imbalance_1000_to_1": {
+    "ratio": "1000:1 (5,000 Benign : 5 SQLi per draw, 500 Stratified Bootstrap replicates)",
+    "pr_auc_mean": 0.9927,
+    "pr_auc_95ci": [
+      0.8055,
+      1.0
+    ],
+    "precision_mean": 0.6641,
+    "precision_95ci": [
+      0.4167,
+      1.0
+    ],
+    "f1_mean": 0.7871,
+    "pool_benign_fpr": 0.0006
+  },
+  "sha256_verification": {
+    "train_csv": "73eec983aaa5d87ab229b08d6dc31ca660b048ba2f90d1a5ae3770eff2c34e55",
+    "test_csv": "a222de8e3b88b442f4b161e38c9d5f6e3d7a20cbede487a0e82503b72e442ca9",
+    "tab11_exp5_cross_dialect_orm_tex": "418c66655f2e21cd7ed92610022b8cee09afb5e85d9bda0eef4d2c675a7d2398"
+  }
+}

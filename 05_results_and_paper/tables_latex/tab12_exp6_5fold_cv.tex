@@ -1,0 +1,22 @@
+% Auto-generated from 100% Real 5-Fold Group-Isolated Cross-Validation Audit (Exp-6, N=50,460)
+\begin{table*}[htbp]
+\centering
+\caption{5-Fold Group-Isolated Cross-Validation across all 50,460 deduplicated SQL queries (42,667 canonical AST templates, 0\% cross-fold template overlap) with sample standard deviation ($\pm s$) and 95\% Student-$t$ confidence intervals.}
+\label{tab:exp6_5fold_cv}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+\textbf{Partition} & \textbf{Test Queries} & \textbf{Templates} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{FPR} & \textbf{ROC-AUC} & \textbf{Escalated ($\rho$)} \\
+\midrule
+Fold 1 & 10,092 & 8,517 & 0.9993 & 0.9984 & 0.9989 & 0.0009 & 0.9999 & 0.38\% \\
+Fold 2 & 10,092 & 8,519 & 1.0000 & 0.9974 & 0.9987 & 0.0000 & 0.9997 & 0.13\% \\
+Fold 3 & 10,092 & 8,542 & 0.9995 & 0.9982 & 0.9988 & 0.0008 & 0.9999 & 0.05\% \\
+Fold 4 & 10,092 & 8,545 & 0.9998 & 0.9986 & 0.9992 & 0.0003 & 0.9998 & 0.13\% \\
+Fold 5 & 10,092 & 8,544 & 0.9994 & 0.9987 & 0.9990 & 0.0011 & 0.9999 & 0.18\% \\
+\midrule
+\textbf{Mean $\pm$ SD} & 10,092 & — & \textbf{0.9996 $\pm$ 0.0003} & \textbf{0.9983 $\pm$ 0.0005} & \textbf{0.9989 $\pm$ 0.0002} & \textbf{0.0006 $\pm$ 0.0005} & \textbf{0.9998 $\pm$ 0.0001} & \textbf{0.17\% $\pm$ 0.12\%} \\
+\textbf{95\% Student-$t$ CI} & — & — & [0.9992, 1.0000] & [0.9976, 0.9989] & [0.9987, 0.9992] & [0.0001, 0.0012] & [0.9997, 1.0000] & [0.02\%, 0.33\%] \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

@@ -1,0 +1,18 @@
+% Auto-generated from 100% Real Live FastAPI/Uvicorn + OpenTelemetry + SQL DB Concurrency Load Test (Exp-4)
+\begin{table*}[htbp]
+\centering
+\caption{End-to-end live HTTP ASGI proxy performance (\texttt{FastAPI} + \texttt{Uvicorn} + \texttt{OpenTelemetry} SDK + indexed relational SQL backend, 10,000 rows) across concurrent client loads ($N=800$ mixed queries per concurrency tier, 3,200 live HTTP requests total).}
+\label{tab:exp4_live_concurrency}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+\textbf{Concurrency} & \textbf{Throughput (RPS)} & \textbf{Net/HTTP (ms)} & \textbf{AI Proxy (ms)} & \textbf{SQL DB (ms)} & \textbf{E2E Mean (ms)} & \textbf{E2E $p_{50}$} & \textbf{E2E $p_{95}$} & \textbf{E2E $p_{99}$} & \textbf{Error Rate} \\
+\midrule
+$C = 1$ & 251.0 & 2.15 & \textbf{1.175} & 0.540 & 3.94 & 3.36 & 7.43 & 8.77 & 0.00\% \\
+$C = 10$ & 519.9 & 14.42 & \textbf{2.366} & 2.164 & 19.05 & 18.60 & 25.96 & 31.62 & 0.00\% \\
+$C = 50$ & 527.5 & 82.91 & \textbf{2.676} & 3.476 & 89.16 & 89.26 & 122.82 & 165.46 & 0.00\% \\
+$C = 100$ & 549.0 & 147.77 & \textbf{2.553} & 4.148 & 154.56 & 142.35 & 325.80 & 815.90 & 0.00\% \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

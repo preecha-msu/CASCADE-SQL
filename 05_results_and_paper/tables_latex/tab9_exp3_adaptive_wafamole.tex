@@ -1,0 +1,19 @@
+% Auto-generated from 100% Real Iterative Guided WAF-A-MoLE Attack Benchmark (Exp-3)
+\begin{table*}[htbp]
+\centering
+\caption{Robustness against iterative grey-box Guided WAF-A-MoLE evolutionary attacks ($N=400$ SQLi payloads, up to $B=100$ queries per payload) comparing Stage-1 CNN-BiLSTM alone against Full Hardened CASCADE-SQL. ASR denotes Attack Success Rate (evasion rate).}
+\label{tab:exp3_adaptive_wafamole}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+\textbf{Attack Budget} & \textbf{Mean $p_1(x^{(B)})$} & \textbf{Stage-1 Recall} & \textbf{Stage-1 ASR} & \textbf{Escalated ($\rho$)} & \textbf{CASCADE Recall} & \textbf{CASCADE ASR} & \textbf{McNemar $p$-value} \\
+\midrule
+$B = 0$ & 0.9817 & 98.25\% & 1.75\% & 9.50\% & \textbf{98.25\%} & \textbf{1.75\%} & 1.0000 \\
+$B = 12$ & 0.8933 & 90.25\% & 9.75\% & 16.25\% & \textbf{93.50\%} & \textbf{6.50\%} & 0.0002 \\
+$B = 24$ & 0.8265 & 83.25\% & 16.75\% & 22.50\% & \textbf{90.00\%} & \textbf{10.00\%} & < 0.0001 \\
+$B = 48$ & 0.7479 & 76.75\% & 23.25\% & 30.75\% & \textbf{85.75\%} & \textbf{14.25\%} & < 0.0001 \\
+$B = 100$ & 0.6225 & 63.50\% & 36.50\% & 34.25\% & \textbf{77.50\%} & \textbf{22.50\%} & < 0.0001 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

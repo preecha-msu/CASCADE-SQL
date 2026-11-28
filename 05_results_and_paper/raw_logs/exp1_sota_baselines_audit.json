@@ -1,0 +1,177 @@
+{
+  "timestamp_utc": "2026-11-28T15:12:05.621118+00:00",
+  "execution_time_sec": 740.502,
+  "baseline_parameter_counts": {
+    "bilstm_attention_2l": 366018,
+    "subword_sql_transformer_4l": 1375233
+  },
+  "sota_comparison_results": {
+    "OWASP ModSecurity CRS v4": {
+      "model_size_kb": null,
+      "held_out_test": {
+        "accuracy": 0.85998,
+        "precision": 0.844695,
+        "recall": 0.948635,
+        "f1_score": 0.893653,
+        "fpr": 0.284766,
+        "fnr": 0.051365,
+        "roc_auc": 0.94247,
+        "pr_auc": 0.954494,
+        "tp": 5836,
+        "fp": 1073,
+        "fn": 316,
+        "tn": 2695
+      },
+      "imbalanced_100_1_pr_auc": 0.26782,
+      "imbalanced_100_1_precision": 0.030527,
+      "adversarial_obfuscated_recall": 0.94132,
+      "single_vcpu_latency_ms": {
+        "mean": 0.047,
+        "p50": 0.0338,
+        "p99": 0.1695
+      },
+      "mcnemar_p_vs_cascade_test": 3.025181535614265e-299,
+      "mcnemar_p_vs_cascade_adv": 1.529180517391176e-72
+    },
+    "LibInjection Tokenizer Engine": {
+      "model_size_kb": null,
+      "held_out_test": {
+        "accuracy": 0.696472,
+        "precision": 0.928279,
+        "recall": 0.553316,
+        "f1_score": 0.69335,
+        "fpr": 0.069798,
+        "fnr": 0.446684,
+        "roc_auc": 0.674901,
+        "pr_auc": 0.791686,
+        "tp": 3404,
+        "fp": 263,
+        "fn": 2748,
+        "tn": 3505
+      },
+      "imbalanced_100_1_pr_auc": 0.059276,
+      "imbalanced_100_1_precision": 0.086022,
+      "adversarial_obfuscated_recall": 0.585826,
+      "single_vcpu_latency_ms": {
+        "mean": 0.0197,
+        "p50": 0.0164,
+        "p99": 0.0456
+      },
+      "mcnemar_p_vs_cascade_test": 0.0,
+      "mcnemar_p_vs_cascade_adv": 0.0
+    },
+    "TF-IDF + HistGBDT (Classical ML)": {
+      "model_size_kb": null,
+      "held_out_test": {
+        "accuracy": 0.995363,
+        "precision": 0.995939,
+        "recall": 0.996586,
+        "f1_score": 0.996263,
+        "fpr": 0.006635,
+        "fnr": 0.003414,
+        "roc_auc": 0.999705,
+        "pr_auc": 0.999829,
+        "tp": 6131,
+        "fp": 25,
+        "fn": 21,
+        "tn": 3743
+      },
+      "imbalanced_100_1_pr_auc": 0.896529,
+      "imbalanced_100_1_precision": 0.568966,
+      "adversarial_obfuscated_recall": 0.923927,
+      "single_vcpu_latency_ms": {
+        "mean": 4.5792,
+        "p50": 4.4268,
+        "p99": 6.3998
+      },
+      "mcnemar_p_vs_cascade_test": 1.8110172867751724e-07,
+      "mcnemar_p_vs_cascade_adv": 7.071384353623845e-92
+    },
+    "BiLSTM-Attention (2-Layer ONNX)": {
+      "model_size_kb": 1435.7,
+      "held_out_test": {
+        "accuracy": 0.998085,
+        "precision": 1.0,
+        "recall": 0.996912,
+        "f1_score": 0.998453,
+        "fpr": 0.0,
+        "fnr": 0.003088,
+        "roc_auc": 0.999188,
+        "pr_auc": 0.999625,
+        "tp": 6133,
+        "fp": 0,
+        "fn": 19,
+        "tn": 3768
+      },
+      "imbalanced_100_1_pr_auc": 0.920322,
+      "imbalanced_100_1_precision": 1.0,
+      "adversarial_obfuscated_recall": 0.971066,
+      "single_vcpu_latency_ms": {
+        "mean": 6.2946,
+        "p50": 5.3982,
+        "p99": 13.2984
+      },
+      "mcnemar_p_vs_cascade_test": 0.09228515625,
+      "mcnemar_p_vs_cascade_adv": 3.8182372986551256e-35
+    },
+    "Subword SQL Transformer (4-Layer ONNX)": {
+      "model_size_kb": 5401.3,
+      "held_out_test": {
+        "accuracy": 0.997984,
+        "precision": 0.999349,
+        "recall": 0.997399,
+        "f1_score": 0.998373,
+        "fpr": 0.001062,
+        "fnr": 0.002601,
+        "roc_auc": 0.999711,
+        "pr_auc": 0.999832,
+        "tp": 6136,
+        "fp": 4,
+        "fn": 16,
+        "tn": 3764
+      },
+      "imbalanced_100_1_pr_auc": 0.918469,
+      "imbalanced_100_1_precision": 0.891892,
+      "adversarial_obfuscated_recall": 0.997562,
+      "single_vcpu_latency_ms": {
+        "mean": 8.1965,
+        "p50": 6.9426,
+        "p99": 18.1328
+      },
+      "mcnemar_p_vs_cascade_test": 0.057373046875,
+      "mcnemar_p_vs_cascade_adv": 0.13380050659179688
+    },
+    "CASCADE-SQL (Hardened INT8, Ours)": {
+      "model_size_kb": 721.8,
+      "held_out_test": {
+        "accuracy": 0.99879,
+        "precision": 0.999512,
+        "recall": 0.998537,
+        "f1_score": 0.999024,
+        "fpr": 0.000796,
+        "fnr": 0.001463,
+        "roc_auc": 0.999764,
+        "pr_auc": 0.999886,
+        "tp": 6143,
+        "fp": 3,
+        "fn": 9,
+        "tn": 3765
+      },
+      "imbalanced_100_1_pr_auc": 0.925687,
+      "imbalanced_100_1_precision": 0.916667,
+      "adversarial_obfuscated_recall": 0.996261,
+      "single_vcpu_latency_ms": {
+        "mean": 1.7291,
+        "p50": 1.2662,
+        "p99": 7.329
+      },
+      "mcnemar_p_vs_cascade_test": 1.0,
+      "mcnemar_p_vs_cascade_adv": 1.0
+    }
+  },
+  "sha256_verification": {
+    "bilstm_attn_onnx": "0eeb7b3034928a7aabec417eb56ebdb259767e0b4c8177e74a63925160f531b1",
+    "subword_transformer_4l_onnx": "137c88a25893088c58fb90274180fe0fa6f65572a8885791fd057fb09ea8402a",
+    "tab8_exp1_sota_baselines_tex": "a9a54368280c375e7825dfe49bb1da90953476453a37397f7434cd495e0e2723"
+  }
+}
