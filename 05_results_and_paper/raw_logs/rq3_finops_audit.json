@@ -1,17 +1,67 @@
 {
-  "timestamp_utc": "2026-11-27T13:15:20.238646+00:00",
-  "execution_time_ms": 0.002,
-  "finops_comparison_per_1m_requests": {
-    "modsecurity_baseline": {
-      "avg_cpu_ms": 4.8,
-      "allocated_ram_mb": 524,
-      "estimated_cost_usd_per_1m": 0.1213
+  "timestamp_utc": "2026-11-27T23:35:03.336660+00:00",
+  "execution_time_ms": 4625.879,
+  "model_disk_footprint": {
+    "stage1_fp32_bytes": 587158,
+    "stage1_int8_bytes": 542892,
+    "stage2_fp32_bytes": 443665,
+    "stage2_int8_bytes": 196267,
+    "combined_fp32_kb": 1006.66,
+    "combined_int8_kb": 721.83,
+    "int8_footprint_reduction_pct": 28.29
+  },
+  "measured_memory_mb": {
+    "process_rss_pytorch_mb": 502.3,
+    "process_rss_onnx_mb": 509.2,
+    "peak_traced_heap_pytorch_kb": 1266.9,
+    "peak_traced_heap_onnx_kb": 148.36
+  },
+  "finops_per_1m_requests_gcp_tier1": {
+    "owasp_crs_v4_regex": {
+      "mean_cpu_ms": 0.1646,
+      "vcpu_seconds_per_1m": 164.6,
+      "gib_seconds_per_1m": 41.15,
+      "compute_cost_usd_per_1m": 0.0041,
+      "total_billable_with_req_fee_usd_per_1m": 0.4041
     },
-    "cascade_sql": {
-      "avg_cpu_ms": 0.394,
-      "allocated_ram_mb": 262,
-      "estimated_cost_usd_per_1m": 0.0097
+    "monolithic_pytorch_fp32_parallel": {
+      "mean_cpu_ms": 3.2954,
+      "vcpu_seconds_per_1m": 3295.412,
+      "gib_seconds_per_1m": 1647.706,
+      "compute_cost_usd_per_1m": 0.0832,
+      "total_billable_with_req_fee_usd_per_1m": 0.4832
     },
-    "cost_reduction_percentage": 92.0
+    "uncascaded_stage2_onnx_int8": {
+      "mean_cpu_ms": 0.9062,
+      "vcpu_seconds_per_1m": 906.186,
+      "gib_seconds_per_1m": 226.546,
+      "compute_cost_usd_per_1m": 0.0223,
+      "total_billable_with_req_fee_usd_per_1m": 0.4223
+    },
+    "cascade_sql_onnx_int8": {
+      "mean_cpu_ms": 0.636,
+      "vcpu_seconds_per_1m": 636.0,
+      "gib_seconds_per_1m": 159.0,
+      "compute_cost_usd_per_1m": 0.0157,
+      "total_billable_with_req_fee_usd_per_1m": 0.4157
+    }
+  },
+  "compute_cost_savings_pct": {
+    "cascade_vs_monolithic_pytorch_fp32_pct": 81.13,
+    "cascade_vs_uncascaded_stage2_pct": 29.6
+  },
+  "operational_impact_per_1m_benign": {
+    "owasp_crs_v4_false_blocked_requests": 284766,
+    "cascade_sql_false_blocked_requests": 531
+  },
+  "sha256_verification": {
+    "rq1_log_json": "3d5ce5a7bbc6593860edb7b184eaa00135d9897e6726e79e53970cfc5e920c92",
+    "rq2_log_json": "9a2e8a7fd095d36915f06cf4e2d8d120745f867f14edf56038ccdc990d6a3843",
+    "tab4_rq3_finops_tex": "744bf83906c87e236996e78c44012bd4e4b27fed89e6027dbe5220d81f3ed7bc"
+  },
+  "uncascaded_stage2_exact_test_metrics": {
+    "held_out_f1": 0.998862,
+    "held_out_fpr": 0.001327,
+    "false_blocks_per_1m_benign": 1327
   }
 }

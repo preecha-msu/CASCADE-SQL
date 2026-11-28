@@ -1,13 +1,17 @@
 # CASCADE-SQL
 
-**Full Title:** *CASCADE-SQL: A Sub-Millisecond Cascaded Multi-Model Proxy for Real-Time SQL Injection Defense in Serverless Cloud Databases*
-**Target Journal:** *Computers & Security* (Elsevier)
-**Verification Policy:** Zero Estimation / 100% Real Execution (Cryptographic SHA-256 Manifest Audited)
+**Full Title:** *CASCADE-SQL: A Sub-Millisecond Cascaded Multi-Model Proxy for Real-Time SQL Injection Defense in Serverless Cloud Databases*  
+**Target Journal:** *Computers & Security* (Elsevier, Q1)  
+**Audit Protocol:** Zero Estimation / 100% Real Execution (Cryptographic SHA-256 Verified)
 
-## Repository Structure
-- `01_datasets/`: Multi-dialect SQL datasets (PostgreSQL, MySQL), Canonical AST template-isolated splits (0% leakage), 100:1 imbalanced splits, and SQLMap/WAF-A-MoLE adversarial payloads.
-- `02_models_colab/`: Stage-1 CNN-BiLSTM Fast Filter, Stage-2 AST-GNN + Distilled Transformer, constrained threshold optimizer, and INT8 ONNX exports.
-- `03_cloud_testbed/`: Serverless API functions, CASCADE-SQL ONNX Proxy, ModSecurity CRS v4 baseline, and OpenTelemetry tracing.
-- `04_evaluation/`: Empirical benchmarks across RQ1-RQ5 (Detection/Evasion, Tail Latency p50/p95/p99, FinOps Cost, Ablation/McNemar/Wilcoxon, SHAP/DoS Resilience).
-- `05_results_and_paper/`: SHA-256 execution logs (`raw_logs/sha256_manifest.json`), LaTeX tables, vector figures, `elsarticle` manuscript, and `CASCADE-SQL_manuscript.zip`.
-- `tools/`: Automated SHA-256 manifest verifier and zero-backup LaTeX ZIP packager.
+## Verified Real Execution Summary
+- **Dataset Isolation:** 50,460 deduplicated PostgreSQL & MySQL queries across 42,667 canonical `sqlglot` AST templates (**0% cross-split template leakage**).
+- **Models (`02_models_colab/exported_onnx/`):**
+  - `stage1_cnn_bilstm_int8.onnx` (145,249 params, 542,892 bytes)
+  - `stage2_ast_verifier_int8.onnx` (106,177 params, 196,267 bytes)
+  - Optimal Validation Router Thresholds: $\tau_{\text{low}}^* = 0.05, \tau_{\text{high}}^* = 0.65$
+- **RQ1 (Accuracy & Evasion):** Held-out Test F1 = **0.9991**, ROC-AUC = **0.9998**, FPR = **0.053%**; 100:1 Imbalanced Precision = **94.29%** (vs. 3.05% CRS v4); Adversarial Obfuscated Recall = **99.59%**.
+- **RQ2 (Single-vCPU Real Latency, $N=9,920$):** Mean = **0.636 ms**, $p_{50}$ = **0.613 ms**, $p_{95}$ = **0.705 ms**, $p_{99}$ = **1.202 ms**, Cold-Start = **20.43 ms**.
+- **RQ3 (Cloud Run FinOps):** Combined INT8 footprint = **721.83 KB**; Incremental compute cost = **$0.0157 / 1M requests** (**81.13%** savings vs. Monolithic PyTorch FP32).
+- **RQ4 (Ablation & Statistics):** McNemar vs. OWASP CRS v4 $\chi^2 = 1370.04$ ($p < 10^{-100}$); Wilcoxon INT8 vs. FP32 $p = 4.79e-87$.
+- **RQ5 (SHAP & DoS Guard):** Verified `shap.KernelExplainer` attributions + 100% Algorithmic DoS interception (**69,852.0x** speedup on 64 KB flood).

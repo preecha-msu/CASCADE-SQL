@@ -1,19 +1,19 @@
-% Auto-generated from SHA-256 verified c1_c2_dataset_pipeline_audit.json
-% Audit SHA-256: f8e53972f0f7c103a272a17fd29e2be735f3026fcb8cc8c054f33c1ebade5657
-\begin{table}[htbp]
+% Auto-generated from SHA-256 Verified Dataset Pipeline Audit
+\begin{table*}[htbp]
 \centering
-\caption{Summary of template-isolated multi-dialect SQL datasets (0\% canonical AST template overlap across splits).}
-\label{tab:dataset_splits}
+\caption{Zero-leakage template-isolated SQL dataset partitions across PostgreSQL and MySQL dialects (42,667 unique canonical AST templates, 0\% cross-split template overlap).}
+\label{tab:dataset_summary}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lrrrrl}
 \toprule
-\textbf{Dataset Split} & \textbf{Total} & \textbf{Benign (0)} & \textbf{SQLi (1)} & \textbf{Templates} & \textbf{SHA-256 Prefix} \\
+\textbf{Dataset Split} & \textbf{Total Queries} & \textbf{Benign ($y=0$)} & \textbf{SQLi ($y=1$)} & \textbf{Unique Templates} & \textbf{Primary Role} \\
 \midrule
-Train Split & 34,553 & 13,661 & 20,892 & 29,013 & \texttt{73eec983aaa5} \\
-Validation Split & 5,987 & 2,095 & 3,892 & 5,120 & \texttt{c5bb7687db69} \\
-Held-out Test Split & 9,920 & 3,768 & 6,152 & 8,534 & \texttt{a222de8e3b88} \\
-\midrule
-Imbalanced Test (100:1) & 3,737 & 3,700 & 37 & — & \texttt{d55a8afe41bf} \\
-Adversarial Obfuscated & 6,152 & 0 & 6,152 & — & \texttt{2d743ea27262} \\
+Training Split (\texttt{train.csv}) & 34,553 & 13,661 & 20,892 & 29,013 & Stage-1 \& Stage-2 Parameter Learning \\
+Validation Split (\texttt{val.csv}) & 5,987 & 2,095 & 3,892 & 5,120 & Constrained Router Calibration ($\tau_{\text{low}}^*, \tau_{\text{high}}^*$) \\
+Held-out Test Split (\texttt{test.csv}) & 9,920 & 3,768 & 6,152 & 8,534 & Unbiased Primary Benchmark (RQ1--RQ4) \\
+Realistic Imbalanced (\texttt{100:1}) & 3,737 & 3,700 & 37 & — & Production False-Positive Stress Test \\
+Adversarial Obfuscated Suite & 6,152 & 0 & 6,152 & — & 7-Strategy SQLMap / WAF-A-MoLE Evasion Test \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{tabular}%
+}
+\end{table*}

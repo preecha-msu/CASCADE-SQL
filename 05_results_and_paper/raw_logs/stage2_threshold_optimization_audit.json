@@ -1,21 +1,47 @@
 {
-  "timestamp_utc": "2026-11-27T12:59:55.419279+00:00",
-  "execution_time_ms": 57.599,
-  "validation_samples": 5987,
+  "timestamp_utc": "2026-11-27T23:20:18.310009+00:00",
+  "execution_time_ms": 12263.497,
+  "constraint_status": "FEASIBLE_OPTIMAL",
+  "constraints": {
+    "eps_fpr": 0.0025,
+    "eps_fnr": 0.005
+  },
+  "measured_stage_latencies_ms": {
+    "stage1_int8_mean_ms": 0.6301,
+    "stage2_ast_int8_mean_ms": 0.6377
+  },
+  "validation_samples_clean": 5987,
+  "validation_obfuscated_probes": 3892,
   "optimal_thresholds": {
-    "tau_low": 0.35,
-    "tau_high": 0.65
+    "tau_low": 0.05,
+    "tau_high": 0.65,
+    "tau_stage2": 0.5
   },
-  "performance_at_optimal_thresholds": {
-    "escalation_rate_pct": 6.08,
-    "expected_latency_ms": 0.478,
-    "accuracy": 0.9835,
-    "fnr": 0.02133,
-    "fpr": 0.00764,
-    "tp": 3809,
-    "fp": 16,
-    "fn": 83,
-    "tn": 2079
+  "performance_on_clean_val": {
+    "escalation_rate_pct": 0.134,
+    "escalated_queries": 8,
+    "expected_latency_ms": 0.631,
+    "accuracy": 0.999332,
+    "precision": 1.0,
+    "recall": 0.998972,
+    "f1_score": 0.999486,
+    "fpr": 0.0,
+    "fnr": 0.001028,
+    "tp": 3888,
+    "fp": 0,
+    "fn": 4,
+    "tn": 2095
   },
-  "sha256": "c5bb7687db69af1da0297dfb93b3afb55435da5beaae4efd4ea85af3d7d94fd6"
+  "performance_on_combined_val_with_obfuscation": {
+    "escalation_rate_pct": 0.213,
+    "f1_score": 0.999486,
+    "fpr": 0.0,
+    "fnr": 0.001028
+  },
+  "artifacts_sha256": {
+    "val_csv": "c5bb7687db69af1da0297dfb93b3afb55435da5beaae4efd4ea85af3d7d94fd6",
+    "stage1_int8_onnx": "c9dc1e6422d43d56ae93b239ec057f8126277c9eee4bd8948a74dca3f9fce802",
+    "stage2_int8_onnx": "c6743b41897eb7b5d4ae7044ccceb2e163d51aa91dbfc5e9245e9a770ea3fa41",
+    "router_thresholds_json": "d79bf9c1e480201961f756d95cb3f94d1cbd036d61ad73bdebb7d97109ef3236"
+  }
 }

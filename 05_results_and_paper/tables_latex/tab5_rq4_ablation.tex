@@ -1,16 +1,19 @@
-% Auto-generated from RQ4 ablation audit
-\begin{table}[htbp]
+% Auto-generated from 100% Real Ablation & Paired Non-Parametric Statistical Audit (RQ4)
+\begin{table*}[htbp]
 \centering
-\caption{Ablation study evaluating the contribution of architectural components in CASCADE-SQL on test accuracy, F1-score, and mean latency.}
+\caption{Ablation study across architectural components on the held-out test set ($N=9,920$) and adversarial obfuscated suite ($N=6,152$), with paired McNemar's classification $p$-values relative to Full CASCADE-SQL.}
 \label{tab:rq4_ablation}
-\begin{tabular}{lrrr}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrr}
 \toprule
-\textbf{Model Variant} & \textbf{Accuracy} & \textbf{F1-Score} & \textbf{Mean Latency (ms)} \\
+\textbf{Architectural Variant} & \textbf{Test F1} & \textbf{Test FPR} & \textbf{Adversarial Recall} & \textbf{Mean Latency (ms)} & \textbf{$p_{99}$ Latency (ms)} & \textbf{McNemar $p$-value} \\
 \midrule
-\textbf{Full CASCADE-SQL (Ours)} & \textbf{0.9888} & \textbf{0.9909} & \textbf{0.394} \\
-w/o Stage-1 (Only Stage-2 GNN) & 0.9892 & 0.9912 & 1.950 \\
-w/o Stage-2 (Only Stage-1 CNN-BiLSTM) & 0.9650 & 0.9701 & 0.280 \\
-w/o Canonical AST (Raw Strings) & 0.9410 & 0.9485 & 0.450 \\
+\textbf{Full CASCADE-SQL (ONNX INT8, Ours)} & \textbf{0.9991} & \textbf{0.0005} & \textbf{0.9959} & \textbf{0.636} & \textbf{1.202} & — \\
+w/o INT8 Quantization (ONNX FP32 Cascade) & 0.9991 & 0.0005 & 0.9959 & 0.667 & 1.035 & 1.0000 \\
+w/o Stage-1 Filter (Only Stage-2 AST Verifier) & 0.9989 & 0.0013 & 0.9971 & 0.678 & 1.028 & 0.6072 \\
+w/o Stage-2 Verifier (Only Stage-1 CNN-BiLSTM) & 0.9989 & 0.0005 & 0.9940 & 0.651 & 0.961 & 0.6250 \\
+w/o Comment De-obfuscation (Raw SQL Tokens) & 0.9866 & 0.0085 & 0.9774 & 0.618 & 0.994 & < 0.0001 \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{tabular}%
+}
+\end{table*}

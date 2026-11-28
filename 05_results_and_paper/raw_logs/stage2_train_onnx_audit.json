@@ -1,0 +1,167 @@
+{
+  "timestamp_utc": "2026-11-27T15:31:13.323185+00:00",
+  "total_execution_sec": 121.804,
+  "feature_extraction_sec": 4.991,
+  "training_device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 2050",
+  "parameter_count": 106177,
+  "structural_features_count": 24,
+  "structural_feature_names": [
+    "norm_byte_length",
+    "max_paren_depth_norm",
+    "shannon_entropy_norm",
+    "comment_block_count",
+    "mysql_versioned_comment_count",
+    "line_comment_count",
+    "semicolon_stacked_count",
+    "single_quote_count",
+    "double_quote_count",
+    "hex_literal_count",
+    "control_whitespace_ratio",
+    "uppercase_transition_ratio",
+    "token_count_norm",
+    "union_select_flag",
+    "boolean_or_and_count",
+    "comparison_op_count",
+    "tautology_pattern_flag",
+    "time_delay_func_flag",
+    "schema_probe_flag",
+    "xml_error_func_flag",
+    "char_encode_func_flag",
+    "typecast_op_count",
+    "null_byte_present_flag",
+    "dos_guard_triggered_flag"
+  ],
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.06109,
+      "val_f1": 0.9982,
+      "val_fpr": 0.001909,
+      "val_fnr": 0.002569,
+      "epoch_sec": 12.739
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.012876,
+      "val_f1": 0.998201,
+      "val_fpr": 0.002387,
+      "val_fnr": 0.002312,
+      "epoch_sec": 11.907
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.010312,
+      "val_f1": 0.998458,
+      "val_fpr": 0.001909,
+      "val_fnr": 0.002055,
+      "epoch_sec": 11.84
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.008135,
+      "val_f1": 0.998329,
+      "val_fpr": 0.001909,
+      "val_fnr": 0.002312,
+      "epoch_sec": 11.889
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.006544,
+      "val_f1": 0.998587,
+      "val_fpr": 0.002864,
+      "val_fnr": 0.001285,
+      "epoch_sec": 11.899
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.005972,
+      "val_f1": 0.998715,
+      "val_fpr": 0.002387,
+      "val_fnr": 0.001285,
+      "epoch_sec": 12.273
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.005069,
+      "val_f1": 0.998844,
+      "val_fpr": 0.001909,
+      "val_fnr": 0.001285,
+      "epoch_sec": 12.215
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.004573,
+      "val_f1": 0.998715,
+      "val_fpr": 0.001909,
+      "val_fnr": 0.001542,
+      "epoch_sec": 12.199
+    }
+  ],
+  "val_metrics_pytorch_fp32": {
+    "accuracy": 0.998497,
+    "precision": 0.998972,
+    "recall": 0.998715,
+    "f1_score": 0.998844,
+    "fpr": 0.001909,
+    "fnr": 0.001285,
+    "tp": 3887,
+    "fp": 4,
+    "fn": 5,
+    "tn": 2091
+  },
+  "val_metrics_onnx_fp32": {
+    "accuracy": 0.998497,
+    "precision": 0.998972,
+    "recall": 0.998715,
+    "f1_score": 0.998844,
+    "fpr": 0.001909,
+    "fnr": 0.001285,
+    "tp": 3887,
+    "fp": 4,
+    "fn": 5,
+    "tn": 2091
+  },
+  "val_metrics_onnx_int8": {
+    "accuracy": 0.998497,
+    "precision": 0.998972,
+    "recall": 0.998715,
+    "f1_score": 0.998844,
+    "fpr": 0.001909,
+    "fnr": 0.001285,
+    "tp": 3887,
+    "fp": 4,
+    "fn": 5,
+    "tn": 2091
+  },
+  "parity_verification": {
+    "max_abs_logit_diff_pt_vs_onnx_fp32": 5.7220458984375e-06,
+    "max_abs_prob_diff_fp32_vs_int8": 0.021016359329223633,
+    "mean_abs_prob_diff_fp32_vs_int8": 4.559463559417054e-05
+  },
+  "single_query_stage2_latency_ms": {
+    "ast_parse_mean_ms": 0.2639,
+    "onnx_int8_infer_mean_ms": 1.0039,
+    "total_mean_ms": 1.2678,
+    "total_p50_ms": 1.0391,
+    "total_p95_ms": 2.6605,
+    "total_p99_ms": 3.1432
+  },
+  "artifacts": {
+    "feature_extractor_py": {
+      "sha256": "2db9de4748d4b8c06b66d92932e2036ef2a33722a0f0c2e1a28c22da7e55ccd8"
+    },
+    "ckpt_pt": {
+      "size_bytes": 437258,
+      "sha256": "5aeceebf8dd0c71cae7abad91aa7e4c909df5fa5f87055577c06a4a7108b3406"
+    },
+    "onnx_fp32": {
+      "size_bytes": 443665,
+      "sha256": "4440d2be610e47756069d6585e8ed4ec9df175db967357d705eb7ed10bba72a0"
+    },
+    "onnx_int8": {
+      "size_bytes": 196267,
+      "sha256": "c6743b41897eb7b5d4ae7044ccceb2e163d51aa91dbfc5e9245e9a770ea3fa41"
+    }
+  }
+}

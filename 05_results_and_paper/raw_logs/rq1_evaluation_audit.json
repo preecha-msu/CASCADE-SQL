@@ -1,59 +1,185 @@
 {
-  "timestamp_utc": "2026-11-27T13:09:01.835020+00:00",
-  "execution_time_ms": 48.506,
-  "evaluation_results": {
+  "timestamp_utc": "2026-11-27T23:24:11.679407+00:00",
+  "execution_time_ms": 11597.234,
+  "thresholds_used": {
+    "tau_low": 0.05,
+    "tau_high": 0.65,
+    "tau_stage2": 0.5
+  },
+  "cascade_sql_onnx_int8": {
     "held_out_test": {
       "samples": 9920,
-      "accuracy": 0.9888,
-      "precision": 0.9959,
-      "recall": 0.986,
-      "f1_score": 0.9909,
-      "false_positive_rate": 0.00663,
-      "false_negative_rate": 0.01398,
-      "escalation_rate_pct": 5.87,
+      "accuracy": 0.998891,
+      "precision": 0.999675,
+      "recall": 0.998537,
+      "f1_score": 0.999105,
+      "false_positive_rate": 0.000531,
+      "false_negative_rate": 0.001463,
+      "roc_auc": 0.999764,
+      "pr_auc": 0.999886,
       "confusion_matrix": {
-        "tp": 6066,
-        "fp": 25,
-        "fn": 86,
-        "tn": 3743
+        "tp": 6143,
+        "fp": 2,
+        "fn": 9,
+        "tn": 3766
+      },
+      "escalation_rate_pct": 0.1512,
+      "escalated_queries": 15,
+      "dos_blocked_queries": 0
+    },
+    "imbalanced_100_1": {
+      "samples": 3737,
+      "accuracy": 0.998394,
+      "precision": 0.942857,
+      "recall": 0.891892,
+      "f1_score": 0.916667,
+      "false_positive_rate": 0.000541,
+      "false_negative_rate": 0.108108,
+      "roc_auc": 0.99176,
+      "pr_auc": 0.926867,
+      "confusion_matrix": {
+        "tp": 33,
+        "fp": 2,
+        "fn": 4,
+        "tn": 3698
+      },
+      "escalation_rate_pct": 0.2676,
+      "escalated_queries": 10,
+      "dos_blocked_queries": 0
+    },
+    "adversarial_obfuscated": {
+      "samples": 6152,
+      "accuracy": 0.995936,
+      "precision": 1.0,
+      "recall": 0.995936,
+      "f1_score": 0.997964,
+      "false_positive_rate": null,
+      "false_negative_rate": 0.004064,
+      "roc_auc": null,
+      "pr_auc": null,
+      "confusion_matrix": {
+        "tp": 6127,
+        "fp": 0,
+        "fn": 25,
+        "tn": 0
+      },
+      "escalation_rate_pct": 0.2926,
+      "escalated_queries": 18,
+      "dos_blocked_queries": 0
+    },
+    "dialect_breakdown_test": {
+      "mysql": {
+        "samples": 5383,
+        "f1_score": 0.998953,
+        "fpr": 0.000491,
+        "fnr": 0.001793
+      },
+      "postgresql": {
+        "samples": 4537,
+        "f1_score": 0.999287,
+        "fpr": 0.000578,
+        "fnr": 0.001069
+      }
+    }
+  },
+  "owasp_crs_v4_baseline": {
+    "held_out_test": {
+      "samples": 9920,
+      "accuracy": 0.85998,
+      "precision": 0.844695,
+      "recall": 0.948635,
+      "f1_score": 0.893653,
+      "false_positive_rate": 0.284766,
+      "false_negative_rate": 0.051365,
+      "roc_auc": 0.94247,
+      "pr_auc": 0.954494,
+      "confusion_matrix": {
+        "tp": 5836,
+        "fp": 1073,
+        "fn": 316,
+        "tn": 2695
       }
     },
     "imbalanced_100_1": {
       "samples": 3737,
-      "accuracy": 0.996,
-      "precision": 0.72,
-      "recall": 0.973,
-      "f1_score": 0.8276,
-      "false_positive_rate": 0.00378,
-      "false_negative_rate": 0.02703,
-      "escalation_rate_pct": 3.13,
+      "accuracy": 0.718491,
+      "precision": 0.030527,
+      "recall": 0.891892,
+      "f1_score": 0.059034,
+      "false_positive_rate": 0.283243,
+      "false_negative_rate": 0.108108,
+      "roc_auc": 0.891147,
+      "pr_auc": 0.26782,
       "confusion_matrix": {
-        "tp": 36,
-        "fp": 14,
-        "fn": 1,
-        "tn": 3686
+        "tp": 33,
+        "fp": 1048,
+        "fn": 4,
+        "tn": 2652
       }
     },
     "adversarial_obfuscated": {
       "samples": 6152,
-      "accuracy": 0.986,
+      "accuracy": 0.94132,
       "precision": 1.0,
-      "recall": 0.986,
-      "f1_score": 0.993,
-      "false_positive_rate": 0.0,
-      "false_negative_rate": 0.01398,
-      "escalation_rate_pct": 6.5,
+      "recall": 0.94132,
+      "f1_score": 0.969773,
+      "false_positive_rate": null,
+      "false_negative_rate": 0.05868,
+      "roc_auc": null,
+      "pr_auc": null,
       "confusion_matrix": {
-        "tp": 6066,
+        "tp": 5791,
         "fp": 0,
-        "fn": 86,
+        "fn": 361,
         "tn": 0
       }
     }
   },
-  "sha256_sources": {
+  "adversarial_strategy_recall_comparison": {
+    "alternating_case": {
+      "count": 1026,
+      "cascade_recall": 1.0,
+      "crs_v4_recall": 0.922027
+    },
+    "compound_wafamole": {
+      "count": 1025,
+      "cascade_recall": 0.999024,
+      "crs_v4_recall": 0.949268
+    },
+    "control_whitespace": {
+      "count": 1025,
+      "cascade_recall": 0.982439,
+      "crs_v4_recall": 0.956098
+    },
+    "mysql_versioned_comment": {
+      "count": 552,
+      "cascade_recall": 0.998188,
+      "crs_v4_recall": 0.98913
+    },
+    "pg_comment_typecast": {
+      "count": 473,
+      "cascade_recall": 1.0,
+      "crs_v4_recall": 0.915433
+    },
+    "space2comment": {
+      "count": 1026,
+      "cascade_recall": 1.0,
+      "crs_v4_recall": 0.931774
+    },
+    "tautology_hex_chr_like": {
+      "count": 1025,
+      "cascade_recall": 0.995122,
+      "crs_v4_recall": 0.933659
+    }
+  },
+  "sha256_verification": {
     "test_csv": "a222de8e3b88b442f4b161e38c9d5f6e3d7a20cbede487a0e82503b72e442ca9",
     "imbalanced_csv": "d55a8afe41bf33d7d8ebece7137e8649cbc8b462d722a1e83421f5f2dcd3023c",
-    "adversarial_csv": "2d743ea272620f2184a393aaae0a314eda7b2d4db95ef0b8ede95548db0f9101"
+    "adversarial_csv": "2d743ea272620f2184a393aaae0a314eda7b2d4db95ef0b8ede95548db0f9101",
+    "router_thresholds_json": "d79bf9c1e480201961f756d95cb3f94d1cbd036d61ad73bdebb7d97109ef3236",
+    "stage1_int8_onnx": "c9dc1e6422d43d56ae93b239ec057f8126277c9eee4bd8948a74dca3f9fce802",
+    "stage2_int8_onnx": "c6743b41897eb7b5d4ae7044ccceb2e163d51aa91dbfc5e9245e9a770ea3fa41",
+    "predictions_npz": "43e65382ff489720afb84cbad74674aabccf276bb06816f2b3c5b5ce791ef196",
+    "tab2_rq1_performance_tex": "37ab171eb86ac036b7fa7dc2a67cd42c6348e3cb8298a96a245975537fd52cf1"
   }
 }

@@ -1,15 +1,22 @@
-% Auto-generated from RQ1 real execution audit
-\begin{table}[htbp]
+% Auto-generated from 100% Real ONNX INT8 RQ1 Execution Audit
+\begin{table*}[htbp]
 \centering
-\caption{Performance evaluation of CASCADE-SQL across standard test, 100:1 imbalanced traffic, and adversarial obfuscated suites.}
+\caption{Detection performance comparison between OWASP ModSecurity CRS v4 and CASCADE-SQL (INT8 ONNX, $\tau_{\text{low}}=0.05, \tau_{\text{high}}=0.65$) across held-out test, 100:1 realistic imbalanced, and adversarial obfuscated suites.}
 \label{tab:rq1_performance}
-\begin{tabular}{lrrrrrr}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrrr}
 \toprule
-\textbf{Evaluation Suite} & \textbf{Samples} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{FPR / FNR} \\
+\textbf{Evaluation Suite} & \textbf{Defense Model} & \textbf{Samples} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{FPR} & \textbf{FNR} \\
 \midrule
-Standard Test Split & 9,920 & 0.9888 & 0.9959 & 0.9860 & 0.9909 & 0.0066 / 0.0140 \\
-Imbalanced (100:1) & 3,737 & 0.9960 & 0.7200 & 0.9730 & 0.8276 & 0.0038 / 0.0270 \\
-Adversarial Obfuscated & 6,152 & 0.9860 & 1.0000 & 0.9860 & 0.9930 & — / 0.0140 \\
+Standard Test Split & ModSecurity CRS v4 & 9,920 & 0.8600 & 0.8447 & 0.9486 & 0.8937 & 0.2848 & 0.0514 \\
+Standard Test Split & \textbf{CASCADE-SQL (Ours)} & 9,920 & \textbf{0.9989} & \textbf{0.9997} & \textbf{0.9985} & \textbf{0.9991} & \textbf{0.0005} & \textbf{0.0015} \\
+\midrule
+Imbalanced (100:1) & ModSecurity CRS v4 & 3,737 & 0.7185 & 0.0305 & 0.8919 & 0.0590 & 0.2832 & 0.1081 \\
+Imbalanced (100:1) & \textbf{CASCADE-SQL (Ours)} & 3,737 & \textbf{0.9984} & \textbf{0.9429} & \textbf{0.8919} & \textbf{0.9167} & \textbf{0.0005} & \textbf{0.1081} \\
+\midrule
+Adversarial Obfuscated & ModSecurity CRS v4 & 6,152 & 0.9413 & 1.0000 & 0.9413 & 0.9698 & N/A & 0.0587 \\
+Adversarial Obfuscated & \textbf{CASCADE-SQL (Ours)} & 6,152 & \textbf{0.9959} & \textbf{1.0000} & \textbf{0.9959} & \textbf{0.9980} & N/A & \textbf{0.0041} \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{tabular}%
+}
+\end{table*}

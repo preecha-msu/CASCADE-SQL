@@ -1,14 +1,18 @@
-% Auto-generated from RQ3 FinOps cost audit
-\begin{table}[htbp]
+% Auto-generated from 100% Real Resource & Cloud Run FinOps Audit (RQ3)
+\begin{table*}[htbp]
 \centering
-\caption{FinOps cost comparison per 1,000,000 requests on Google Cloud Run between ModSecurity baseline and CASCADE-SQL.}
+\caption{Empirical model footprint, Cloud Run container tier, CPU time, incremental compute cost per $10^6$ requests (Google Cloud Run Tier-1, 1 vCPU), and false-blocked benign requests per $10^6$ queries.}
 \label{tab:rq3_finops}
-\begin{tabular}{lrrr}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrr}
 \toprule
-\textbf{Deployment Configuration} & \textbf{Avg CPU Time (ms)} & \textbf{RAM (MB)} & \textbf{Cost per 1M Requests (\$USD)} \\
+\textbf{Deployment Architecture} & \textbf{Model Size (KB)} & \textbf{Cloud Run Tier} & \textbf{Mean CPU (ms)} & \textbf{Compute Cost / $10^6$ (\$)} & \textbf{Held-out F1} & \textbf{False Blocks / $10^6$ Benign} \\
 \midrule
-ModSecurity CRS v4 (Baseline) & 4.800 & 524 & \$0.1213 \\
-\textbf{CASCADE-SQL (Ours)} & \textbf{0.394} & \textbf{262} & \textbf{\$0.0097} \\
+OWASP CRS v4 (60-Rule Regex WAF) & — & 1 vCPU / 256 MiB & 0.165 & \$0.0041 & 0.8937 & 284,766 \\
+Monolithic Parallel Ensemble (PyTorch FP32) & 1,006.7 & 1 vCPU / 512 MiB & 3.295 & \$0.0832 & 0.9991 & 531 \\
+Un-cascaded Stage-2 Deep Verifier (ONNX INT8) & 191.7 & 1 vCPU / 256 MiB & 0.906 & \$0.0223 & 0.9989 & 1,327 \\
+\textbf{CASCADE-SQL (Cascaded ONNX INT8, Ours)} & \textbf{721.8} & \textbf{1 vCPU / 256 MiB} & \textbf{0.636} & \textbf{\$0.0157} & \textbf{0.9991} & \textbf{531} \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{tabular}%
+}
+\end{table*}

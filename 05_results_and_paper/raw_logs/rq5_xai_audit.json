@@ -1,31 +1,124 @@
 {
-  "timestamp_utc": "2026-11-27T13:17:46.928095+00:00",
-  "execution_time_ms": 0.002,
-  "xai_top_features": [
+  "timestamp_utc": "2026-11-28T00:19:21.020535+00:00",
+  "execution_time_ms": 113908.909,
+  "shap_verification": {
+    "explainer": "shap.KernelExplainer (Stage-2 ONNX INT8)",
+    "background_benign_samples": 30,
+    "explained_attack_samples": 60,
+    "base_expected_value": 0.001109,
+    "local_additivity_max_abs_error": 0.01105368137359608,
+    "top_10_structural_features": [
+      {
+        "rank": 1,
+        "feature_name": "line_comment_count",
+        "mean_abs_shap": 0.563674,
+        "mean_signed_shap": 0.563674
+      },
+      {
+        "rank": 2,
+        "feature_name": "tautology_pattern_flag",
+        "mean_abs_shap": 0.086562,
+        "mean_signed_shap": 0.086562
+      },
+      {
+        "rank": 3,
+        "feature_name": "max_paren_depth_norm",
+        "mean_abs_shap": 0.072373,
+        "mean_signed_shap": 0.072373
+      },
+      {
+        "rank": 4,
+        "feature_name": "norm_byte_length",
+        "mean_abs_shap": 0.045915,
+        "mean_signed_shap": 0.045109
+      },
+      {
+        "rank": 5,
+        "feature_name": "shannon_entropy_norm",
+        "mean_abs_shap": 0.038528,
+        "mean_signed_shap": -0.031085
+      },
+      {
+        "rank": 6,
+        "feature_name": "semicolon_stacked_count",
+        "mean_abs_shap": 0.032272,
+        "mean_signed_shap": -0.032272
+      },
+      {
+        "rank": 7,
+        "feature_name": "comparison_op_count",
+        "mean_abs_shap": 0.024123,
+        "mean_signed_shap": -0.024123
+      },
+      {
+        "rank": 8,
+        "feature_name": "union_select_flag",
+        "mean_abs_shap": 0.020289,
+        "mean_signed_shap": 0.020289
+      },
+      {
+        "rank": 9,
+        "feature_name": "uppercase_transition_ratio",
+        "mean_abs_shap": 0.01274,
+        "mean_signed_shap": -0.012253
+      },
+      {
+        "rank": 10,
+        "feature_name": "char_encode_func_flag",
+        "mean_abs_shap": 0.010419,
+        "mean_signed_shap": 0.010419
+      }
+    ]
+  },
+  "algorithmic_dos_resilience": [
     {
-      "token_or_subgraph": "UNION SELECT",
-      "shap_importance_score": 0.428
+      "attack_profile": "12 KB Union/Comment Flood",
+      "payload_bytes": 12451,
+      "cascade_block_rate_pct": 100.0,
+      "cascade_guarded_mean_ms": 0.0008,
+      "cascade_guarded_p99_ms": 0.0012,
+      "unguarded_ast_mean_ms": 38.781,
+      "unguarded_ast_p99_ms": 116.349,
+      "unguarded_recursion_faults": 0,
+      "mitigation_speedup_factor": 51570.0
     },
     {
-      "token_or_subgraph": "PG_SLEEP / SLEEP",
-      "shap_importance_score": 0.315
+      "attack_profile": "32 KB Obfuscated Flood",
+      "payload_bytes": 32154,
+      "cascade_block_rate_pct": 100.0,
+      "cascade_guarded_mean_ms": 0.0011,
+      "cascade_guarded_p99_ms": 0.0016,
+      "unguarded_ast_mean_ms": 55.582,
+      "unguarded_ast_p99_ms": 104.298,
+      "unguarded_recursion_faults": 0,
+      "mitigation_speedup_factor": 48670.8
     },
     {
-      "token_or_subgraph": "INFORMATION_SCHEMA",
-      "shap_importance_score": 0.184
+      "attack_profile": "64 KB Megapayload DoS",
+      "payload_bytes": 64888,
+      "cascade_block_rate_pct": 100.0,
+      "cascade_guarded_mean_ms": 0.0015,
+      "cascade_guarded_p99_ms": 0.002,
+      "unguarded_ast_mean_ms": 104.08,
+      "unguarded_ast_p99_ms": 157.013,
+      "unguarded_recursion_faults": 0,
+      "mitigation_speedup_factor": 69852.0
     },
     {
-      "token_or_subgraph": "Inline Comment (/*!...*/) ",
-      "shap_importance_score": 0.052
-    },
-    {
-      "token_or_subgraph": "Tautology ('1'='1')",
-      "shap_importance_score": 0.021
+      "attack_profile": "200-Depth Nested Paren Bomb",
+      "payload_bytes": 428,
+      "cascade_block_rate_pct": 100.0,
+      "cascade_guarded_mean_ms": 0.0225,
+      "cascade_guarded_p99_ms": 0.0341,
+      "unguarded_ast_mean_ms": 3.517,
+      "unguarded_ast_p99_ms": 5.227,
+      "unguarded_recursion_faults": 20,
+      "mitigation_speedup_factor": 156.6
     }
   ],
-  "algorithmic_dos_resilience": {
-    "max_allowed_sql_bytes": 8192,
-    "overlength_query_action": "Early Rejection / Truncation Fallback",
-    "latency_under_10kb_payload_ms": 0.412
+  "sha256_verification": {
+    "stage2_int8_onnx": "c6743b41897eb7b5d4ae7044ccceb2e163d51aa91dbfc5e9245e9a770ea3fa41",
+    "rq5_real_shap_values_npz": "7e3892f52af7f4825ff58f3dfc1329ecd18e140f11743a502a26548fa64f0f59",
+    "tab6_rq5_xai_tex": "b1e1d57a7ca24598b02f3497097d1008c2bc8bcd8c5e5dcfa723ecf889efb661"
   }
 }

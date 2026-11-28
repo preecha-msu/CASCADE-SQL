@@ -5,19 +5,22 @@ __pycache__/
 venv/
 .env
 
-# Unrelated Local Scratch Files
+# Unrelated Local Scratch & Backup Files
 work_CAPQ-Pareto.txt
 CASCADE-SQL-work.txt
 Gemini_Generated_Image_*.jpg
 *.bak
 *~
+CASCADE-SQL_V1.zip
 
-# Large Raw Datasets & Checkpoints (Tracked via SHA-256 Manifest)
+# Large Raw Datasets, PyTorch Checkpoints & Intermediate Binary Arrays (Tracked via SHA-256 Manifest)
 01_datasets/raw/**/*.csv
 01_datasets/raw/**/*.parquet
+01_datasets/raw/**/*.json
 01_datasets/processed/*.parquet
 02_models_colab/checkpoints/*.pt
 02_models_colab/checkpoints/*.bin
+05_results_and_paper/raw_logs/*.npz
 
 # Cloud Secrets (NEVER COMMIT)
 *credentials*.json

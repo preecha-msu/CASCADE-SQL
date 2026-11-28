@@ -1,0 +1,10 @@
+{
+  "tau_low": 0.05,
+  "tau_high": 0.65,
+  "tau_stage2": 0.5,
+  "measured_mean_stage1_ms": 0.6301,
+  "measured_mean_stage2_ms": 0.6377,
+  "constraint_status": "FEASIBLE_OPTIMAL",
+  "stage1_onnx_sha256": "c9dc1e6422d43d56ae93b239ec057f8126277c9eee4bd8948a74dca3f9fce802",
+  "stage2_onnx_sha256": "c6743b41897eb7b5d4ae7044ccceb2e163d51aa91dbfc5e9245e9a770ea3fa41"
+}

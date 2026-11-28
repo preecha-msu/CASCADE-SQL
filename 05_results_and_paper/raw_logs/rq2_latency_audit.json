@@ -1,18 +1,60 @@
 {
-  "timestamp_utc": "2026-11-27T13:14:26.349675+00:00",
-  "execution_time_ms": 18.332,
+  "timestamp_utc": "2026-11-27T23:28:26.666166+00:00",
+  "total_benchmark_wall_sec": 8.249,
+  "queries_benchmarked": 9920,
+  "zero_simulation_verified": true,
+  "cold_start_initialization_ms": {
+    "runs": [
+      23.467,
+      19.713,
+      20.241,
+      19.336,
+      19.405
+    ],
+    "mean_ms": 20.432,
+    "std_ms": 1.734
+  },
   "latency_comparison_ms": {
     "cascade_sql": {
-      "p50": 0.267,
-      "p95": 1.078,
-      "p99": 2.852,
-      "mean": 0.394
+      "mean": 0.636,
+      "std": 0.1606,
+      "min": 0.5853,
+      "p50": 0.6125,
+      "p95": 0.7051,
+      "p99": 1.2023,
+      "max": 10.5357
     },
-    "modsecurity_baseline": {
-      "p50": 4.405,
-      "p95": 9.284,
-      "p99": 11.779,
-      "mean": 4.793
+    "owasp_crs_v4_baseline": {
+      "mean": 0.1646,
+      "std": 0.1216,
+      "min": 0.0087,
+      "p50": 0.1457,
+      "p95": 0.3519,
+      "p99": 0.6597,
+      "max": 1.42
     }
+  },
+  "cascade_component_breakdown_mean_ms": {
+    "dos_guard_mean_ms": 0.00378,
+    "stage1_onnx_int8_mean_ms": 0.6295,
+    "stage2_amortized_mean_ms": 0.00272,
+    "stage2_when_escalated_mean_ms": 1.8007
+  },
+  "routing_distribution": {
+    "dos_guard_block": 0,
+    "fast_benign": 3765,
+    "fast_sqli": 6140,
+    "escalated_stage2": 15
+  },
+  "throughput_single_vcpu_rps": {
+    "cascade_sql_rps": 1572.3,
+    "owasp_crs_v4_rps": 6075.3,
+    "mean_speedup_factor": 0.26,
+    "p99_speedup_factor": 0.55
+  },
+  "sha256_verification": {
+    "test_csv": "a222de8e3b88b442f4b161e38c9d5f6e3d7a20cbede487a0e82503b72e442ca9",
+    "rq2_real_latencies_npz": "ba56fb455ccb27b213add128c500911782c571f141fb10a7128e12f3dfc007b3",
+    "tab3_rq2_latency_tex": "9e5aafdaeffb99acdb3284c819b1632e743f611c53a6e12989deb5c5b83321f2"
   }
 }
